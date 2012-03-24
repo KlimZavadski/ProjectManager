@@ -1,0 +1,39 @@
+c:\users\aliaksandr\documents\visual studio 2010\Projects\ProjectManager\ProjectManager.WebUI\bin\ProjectManager.WebUI.dll
+c:\users\aliaksandr\documents\visual studio 2010\Projects\ProjectManager\ProjectManager.WebUI\bin\ProjectManager.WebUI.pdb
+c:\users\aliaksandr\documents\visual studio 2010\Projects\ProjectManager\ProjectManager.WebUI\bin\EntityFramework.dll
+c:\users\aliaksandr\documents\visual studio 2010\Projects\ProjectManager\ProjectManager.WebUI\bin\EntityFramework.xml
+c:\users\aliaksandr\documents\visual studio 2010\Projects\ProjectManager\ProjectManager.WebUI\obj\Debug\ResolveAssemblyReference.cache
+c:\users\aliaksandr\documents\visual studio 2010\Projects\ProjectManager\ProjectManager.WebUI\obj\Debug\ProjectManager.WebUI.dll
+c:\users\aliaksandr\documents\visual studio 2010\Projects\ProjectManager\ProjectManager.WebUI\obj\Debug\ProjectManager.WebUI.pdb
+C:\Users\aliaksandr\documents\visual studio 2010\Projects\ProjectManager\ProjectManager.WebUI\bin\Moq.dll
+C:\Users\aliaksandr\documents\visual studio 2010\Projects\ProjectManager\ProjectManager.WebUI\bin\Ninject.dll
+C:\Users\aliaksandr\documents\visual studio 2010\Projects\ProjectManager\ProjectManager.WebUI\bin\Moq.pdb
+C:\Users\aliaksandr\documents\visual studio 2010\Projects\ProjectManager\ProjectManager.WebUI\bin\Moq.xml
+C:\Users\aliaksandr\documents\visual studio 2010\Projects\ProjectManager\ProjectManager.WebUI\bin\Ninject.pdb
+C:\Users\aliaksandr\documents\visual studio 2010\Projects\ProjectManager\ProjectManager.WebUI\bin\Ninject.xml
+C:\STUDENTS\ProjectManager\ProjectManager.WebUI\obj\Debug\ResolveAssemblyReference.cache
+C:\STUDENTS\ProjectManager\ProjectManager.WebUI\obj\Debug\ProjectManager.WebUI.dll
+C:\STUDENTS\ProjectManager\ProjectManager.WebUI\bin\ProjectManager.WebUI.dll
+C:\STUDENTS\ProjectManager\ProjectManager.WebUI\bin\ProjectManager.WebUI.pdb
+C:\STUDENTS\ProjectManager\ProjectManager.WebUI\bin\EntityFramework.dll
+C:\STUDENTS\ProjectManager\ProjectManager.WebUI\bin\Moq.dll
+C:\STUDENTS\ProjectManager\ProjectManager.WebUI\bin\Ninject.dll
+C:\STUDENTS\ProjectManager\ProjectManager.WebUI\bin\EntityFramework.xml
+C:\STUDENTS\ProjectManager\ProjectManager.WebUI\bin\Moq.pdb
+C:\STUDENTS\ProjectManager\ProjectManager.WebUI\bin\Moq.xml
+C:\STUDENTS\ProjectManager\ProjectManager.WebUI\bin\Ninject.pdb
+C:\STUDENTS\ProjectManager\ProjectManager.WebUI\bin\Ninject.xml
+C:\STUDENTS\ProjectManager\ProjectManager.WebUI\obj\Debug\ProjectManager.WebUI.pdb
+C:\Users\Klim\Documents\Visual Studio 2010\Projects\ProjectManager\ProjectManager.WebUI\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Klim\Documents\Visual Studio 2010\Projects\ProjectManager\ProjectManager.WebUI\obj\Debug\ProjectManager.WebUI.dll
+C:\Users\Klim\Documents\Visual Studio 2010\Projects\ProjectManager\ProjectManager.WebUI\bin\ProjectManager.WebUI.dll
+C:\Users\Klim\Documents\Visual Studio 2010\Projects\ProjectManager\ProjectManager.WebUI\bin\ProjectManager.WebUI.pdb
+C:\Users\Klim\Documents\Visual Studio 2010\Projects\ProjectManager\ProjectManager.WebUI\bin\EntityFramework.dll
+C:\Users\Klim\Documents\Visual Studio 2010\Projects\ProjectManager\ProjectManager.WebUI\bin\Moq.dll
+C:\Users\Klim\Documents\Visual Studio 2010\Projects\ProjectManager\ProjectManager.WebUI\bin\Ninject.dll
+C:\Users\Klim\Documents\Visual Studio 2010\Projects\ProjectManager\ProjectManager.WebUI\bin\EntityFramework.xml
+C:\Users\Klim\Documents\Visual Studio 2010\Projects\ProjectManager\ProjectManager.WebUI\bin\Moq.pdb
+C:\Users\Klim\Documents\Visual Studio 2010\Projects\ProjectManager\ProjectManager.WebUI\bin\Moq.xml
+C:\Users\Klim\Documents\Visual Studio 2010\Projects\ProjectManager\ProjectManager.WebUI\bin\Ninject.pdb
+C:\Users\Klim\Documents\Visual Studio 2010\Projects\ProjectManager\ProjectManager.WebUI\bin\Ninject.xml
+C:\Users\Klim\Documents\Visual Studio 2010\Projects\ProjectManager\ProjectManager.WebUI\obj\Debug\ProjectManager.WebUI.pdb

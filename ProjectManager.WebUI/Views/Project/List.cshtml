@@ -1,0 +1,210 @@
+﻿@model ProjectManager.WebUI.Models.ViewModels.ProjectListViewModel
+@{
+    ViewBag.Title = "ProjectsList";
+}
+
+<h2>ProjectsList</h2>
+
+@using(Html.BeginForm("List", "Project", FormMethod.Get))
+{
+    @Html.TextBox("filter", Request.Params["filter"])
+}
+
+@using (Html.BeginForm())
+{
+    <p align="right" class="actionButtons">
+        <a href="@Url.Action("EditHeaders", "Project", new { returnUrl = Request.Url.PathAndQuery })">Edit Displayed Field</a>
+    </p>
+}
+
+<table border="1" cellpadding="10" cellspacing="0">
+    <tr>
+        @foreach (String head in Model.Headers)
+        {
+            <th>@head</th>
+        }
+    </tr>
+    @foreach (ProjectManager.WebUI.Models.ViewModels.ProjectViewModel project in Model.Projects)
+    {
+        <tr>
+            @foreach (String head in Model.Headers)
+            {
+                bool propertyIsEmpty = true;
+                foreach (ProjectManager.WebUI.Models.ViewModels.PropertyViewModel property in project.Properties)
+                {
+                    if (property.PropertyName == head)
+                    {
+                        if (property.PropertyValues.Count > 1)
+                        {						
+                            <td>
+                                @foreach (ProjectManager.WebUI.Models.ViewModels.PropertyValue s in property.PropertyValues)
+                                {
+                                    @s.Value
+                                    <br />
+                                }
+                            </td>	  
+                        }
+                        else
+                        {
+                            if (property.PropertyName == "Title")
+                            {
+                                <td>@Html.ActionLink(property.PropertyValues[0].Value, "Details", "Project", new { returnUrl = Request.Url.PathAndQuery, id = project.ProjectId }, null)</td>
+							}
+                            else
+                            {
+                                <td>@property.PropertyValues[0].Value</td>
+                            }
+                        }
+                        propertyIsEmpty = false;
+                        break;
+                    }
+                }
+                if (propertyIsEmpty)
+                {
+                    <td>N/A</td>
+                }				
+			}
+			<td>@Html.ActionLink("Delete", "Delete", "Project", new { returnUrl = Request.Url.PathAndQuery, id = project.ProjectId }, null)</td>
+        </tr>
+	}
+</table>
+
+<p align="left" class="actionButtons">
+        <a href="@Url.Action("Add", "Project", new { returnUrl = Request.Url.PathAndQuery })">Add new project</a>
+    </p>
+
+
+@*
+<button id="test1">
+    <span class="ui-icon ui-icon-newwin"></span>Go ahead!
+</button>
+<div id="dialog" title="basic diallog">
+    <p>
+        lkjahldjaksdjkaldjs
+    </p>
+</div>
+<script type="text/javascript">
+    $("#dialog").dialog({
+        autoOpen: false,
+        width: 400,
+        buttons: {
+            "Sweet": function () {
+                closeDialog($(this))
+            }
+        }
+    });
+
+    function closeDialog(elem) {
+        elem.dialog("close");
+    }
+
+    // the button to open the dialog
+    $("#test1").button()
+    .click(function () {
+        $('#dialog').dialog('open');
+    });
+</script>
+<br />
+<button id="filter-homes">
+    test</button>
+<div id="loading-content" style="display: none;">
+    Loading data
+</div>
+<div id="home-list">
+</div>
+<div id="form-dialog">
+    <h3 id="form-header">
+        Select options</h3>
+    <div id="form-body">
+        <label for="maxPrice">
+            maxprice</label>
+        <input type="text" id="maxPrice" style="border: 0; color: #f6931f; font-weight: bold;" />
+        <div id="value-slider">
+        </div>
+        <label for="minBed">
+            minbedrooms</label>
+        <input type="text" id="minBedrooms" style="border: 0; color: #f6931f; font-weight: bold;" />
+        <div id="room-slider">
+        </div>
+        <input type="button" id="b1" value="add" />
+        <div id="test">
+            <p>
+                <input type="text" value="t1" /></p>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" language="javascript">
+    $(function () {
+        var i = $('input').size() + 1;
+
+        // create our dialog
+        $('#form-dialog').dialog({
+            autoOpen: false,
+            width: 400,
+            modal: true,
+            buttons: {
+                "Filter": function () {
+                    $(this).dialog("close");
+                }
+            },
+            close: function () {
+                var a = $(':text');
+                var result1 = "";
+                a.each(function (index) {
+                    //result1 += $(this).valueOf().toString();
+                    result1 += $(this).val();
+                    result1 += "%%";
+                });
+                refreshHomes($("#value-slider").slider("value"), $("#room-slider").slider("value"), result1);
+            }
+        });
+
+        $("#value-slider").slider({
+            value: 300000,
+            min: 100000,
+            max: 700000,
+            step: 25000,
+            slide: function (event, ui) {
+                $("#maxPrice").val('$' + ui.value);
+            }
+        });
+
+        $("#room-slider").slider({
+            value: 4,
+            min: 1,
+            max: 10,
+            slide: function (event, ui) {
+                $("#minBedrooms").val(ui.value);
+            }
+        });
+
+        $("#filter-homes").button().click(function () {
+            $('#form-dialog').dialog('open');
+        });
+
+        $("#b1").button().click(function () {
+            $('<p><input type="text" value="' + i + '" /></p>').appendTo($("#test"));
+            i++;
+        });
+
+        // initialize the values on our labels
+        $("#maxPrice").val('$' + $("#value-slider").slider("value"));
+        $("#minBedrooms").val($("#room-slider").slider("value"));
+
+    });
+
+
+    function refreshHomes(price, beds, result1) {
+        $("#loading-content").slideDown('fast', function () {
+            $.post(
+                    "Projects/SearchHomes",
+                    { maxPrice: price, minBedrooms: beds, result: result1 },
+                    function (data) {
+                        $("#home-list").html(data);
+                        $("#loading-content").slideUp();
+                    });
+        });
+    }
+
+</script>
+*@

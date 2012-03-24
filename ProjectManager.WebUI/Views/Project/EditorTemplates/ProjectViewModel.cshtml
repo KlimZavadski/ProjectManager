@@ -1,0 +1,9 @@
+﻿@model ProjectManager.WebUI.Models.ViewModels.ProjectViewModel
+
+@Html.DisplayFor(model => model.ProjectId)
+@Html.DisplayFor(model => model.CreateBy)
+@Html.DisplayFor(model => model.CreateAt)
+
+@Html.LabelFor(model => model.Properties)
+<br />
+@Html.EditorFor(model => model.Properties)

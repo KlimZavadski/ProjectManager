@@ -1,0 +1,22 @@
+﻿@model ProjectManager.WebUI.Models.ViewModels.ProjectViewModel
+@{
+    ViewBag.Title = "Details";
+}
+<h2>Details</h2>
+@using (Html.BeginForm())
+{
+    @Html.DisplayForModel()
+}
+
+@using (Html.BeginForm())
+{
+    <p align="right" class="actionButtons">
+        <a href="@Url.Action("Edit", "Project", new { returnUrl = Request.Url.PathAndQuery, id = Model.ProjectId })">Edit</a>
+    </p>
+}
+@using (Html.BeginForm())
+{
+    <p align="right" class="actionButtons">
+        <a href="@Url.Action("Delete", "Project", new { returnUrl = Request.Url.PathAndQuery, id = Model.ProjectId })">Delete</a>
+    </p>
+}

@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="projectmanagerdbModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="projectmanagerdbModelStoreContainer">
+    <EntitySet Name="HistoryRecords" EntityType="projectmanagerdbModel.Store.HistoryRecords" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Persons" EntityType="projectmanagerdbModel.Store.Persons" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Projects" EntityType="projectmanagerdbModel.Store.Projects" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Properties" EntityType="projectmanagerdbModel.Store.Properties" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PropertyDefaultValues" EntityType="projectmanagerdbModel.Store.PropertyDefaultValues" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Types" EntityType="projectmanagerdbModel.Store.Types" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_HistoryRecords_HistoryRecords" Association="projectmanagerdbModel.Store.FK_HistoryRecords_HistoryRecords">
+      <End Role="Persons" EntitySet="Persons" />
+      <End Role="HistoryRecords" EntitySet="HistoryRecords" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HistoryRecords_Properties" Association="projectmanagerdbModel.Store.FK_HistoryRecords_Properties">
+      <End Role="Properties" EntitySet="Properties" />
+      <End Role="HistoryRecords" EntitySet="HistoryRecords" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Projects_Persons" Association="projectmanagerdbModel.Store.FK_Projects_Persons">
+      <End Role="Persons" EntitySet="Persons" />
+      <End Role="Projects" EntitySet="Projects" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Projects_Properties" Association="projectmanagerdbModel.Store.FK_Projects_Properties">
+      <End Role="Properties" EntitySet="Properties" />
+      <End Role="Projects" EntitySet="Projects" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Properties_Types" Association="projectmanagerdbModel.Store.FK_Properties_Types">
+      <End Role="Types" EntitySet="Types" />
+      <End Role="Properties" EntitySet="Properties" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PropertyDefaultValues_Properties" Association="projectmanagerdbModel.Store.FK_PropertyDefaultValues_Properties">
+      <End Role="Properties" EntitySet="Properties" />
+      <End Role="PropertyDefaultValues" EntitySet="PropertyDefaultValues" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="HistoryRecords">
+    <Key>
+      <PropertyRef Name="HistoryRecordsPK" />
+    </Key>
+    <Property Name="H_ProjectId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="H_PropertyId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="H_PropertyValue" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="H_PropertyDateModified" Type="datetime" Nullable="false" />
+    <Property Name="H_PropertyPersonId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="HistoryRecordsPK" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Persons">
+    <Key>
+      <PropertyRef Name="PersonId" />
+    </Key>
+    <Property Name="PersonId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="PersonName" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Projects">
+    <Key>
+      <PropertyRef Name="ProjectsPK" />
+    </Key>
+    <Property Name="ProjectId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="PropertyId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="PropertyValue" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="PropertyDateModified" Type="datetime" Nullable="false" />
+    <Property Name="PropertyPersonId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ProjectsPK" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Properties">
+    <Key>
+      <PropertyRef Name="PropertyId" />
+    </Key>
+    <Property Name="PropertyId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="PropertyName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="PropertyIsPublic" Type="bit" Nullable="false" />
+    <Property Name="PropertyIsDefault" Type="bit" Nullable="false" />
+    <Property Name="PropertyTypeId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="PropertyCanModify" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PropertyDefaultValues">
+    <Key>
+      <PropertyRef Name="PropertyDefaultValuesPK" />
+    </Key>
+    <Property Name="PropertyId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="PropertyValue" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="PropertyDefaultValuesPK" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Types">
+    <Key>
+      <PropertyRef Name="TypeId" />
+    </Key>
+    <Property Name="TypeId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="TypeName" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_HistoryRecords_HistoryRecords">
+    <End Role="Persons" Type="projectmanagerdbModel.Store.Persons" Multiplicity="1" />
+    <End Role="HistoryRecords" Type="projectmanagerdbModel.Store.HistoryRecords" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Persons">
+        <PropertyRef Name="PersonId" />
+      </Principal>
+      <Dependent Role="HistoryRecords">
+        <PropertyRef Name="H_PropertyPersonId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HistoryRecords_Properties">
+    <End Role="Properties" Type="projectmanagerdbModel.Store.Properties" Multiplicity="1" />
+    <End Role="HistoryRecords" Type="projectmanagerdbModel.Store.HistoryRecords" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Properties">
+        <PropertyRef Name="PropertyId" />
+      </Principal>
+      <Dependent Role="HistoryRecords">
+        <PropertyRef Name="H_PropertyId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Projects_Persons">
+    <End Role="Persons" Type="projectmanagerdbModel.Store.Persons" Multiplicity="1" />
+    <End Role="Projects" Type="projectmanagerdbModel.Store.Projects" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Persons">
+        <PropertyRef Name="PersonId" />
+      </Principal>
+      <Dependent Role="Projects">
+        <PropertyRef Name="PropertyPersonId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Projects_Properties">
+    <End Role="Properties" Type="projectmanagerdbModel.Store.Properties" Multiplicity="1" />
+    <End Role="Projects" Type="projectmanagerdbModel.Store.Projects" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Properties">
+        <PropertyRef Name="PropertyId" />
+      </Principal>
+      <Dependent Role="Projects">
+        <PropertyRef Name="PropertyId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Properties_Types">
+    <End Role="Types" Type="projectmanagerdbModel.Store.Types" Multiplicity="1" />
+    <End Role="Properties" Type="projectmanagerdbModel.Store.Properties" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Types">
+        <PropertyRef Name="TypeId" />
+      </Principal>
+      <Dependent Role="Properties">
+        <PropertyRef Name="PropertyTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PropertyDefaultValues_Properties">
+    <End Role="Properties" Type="projectmanagerdbModel.Store.Properties" Multiplicity="1" />
+    <End Role="PropertyDefaultValues" Type="projectmanagerdbModel.Store.PropertyDefaultValues" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Properties">
+        <PropertyRef Name="PropertyId" />
+      </Principal>
+      <Dependent Role="PropertyDefaultValues">
+        <PropertyRef Name="PropertyId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
