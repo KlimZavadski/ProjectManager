@@ -190,7 +190,7 @@ namespace ProjectManager.WebUI.Models
                         PropertiesOfProject oldProperty = repository.PropertiesOfProjects
                             .Where(x => x.ProjectID == projectViewModel.ProjectId &&
                                 x.PropertyID == propertyViewModel.PropertyId &&
-                                x.PropertyValue == propertyValue.Value)
+                                x.RecordID == propertyValue.RecordId)
                             .SingleOrDefault();
                         if (oldProperty != null)
                         {
@@ -232,7 +232,6 @@ namespace ProjectManager.WebUI.Models
 
         }
 
-
         public ProjectViewModel AddNewProject()
         {
             ProjectViewModel projectViewModel = new ProjectViewModel();
@@ -243,12 +242,37 @@ namespace ProjectManager.WebUI.Models
 
         public void DeleteProject(Guid id)
         {
+            DeletePropertiesOfProject(id);
+            DeleteHistoryOfProject(id);
             Project project = repository.Projects
                 .Where(x => x.ProjectID == id)
                 .SingleOrDefault();
             if (project != null)
             {
                 repository.Projects.DeleteObject(project);
+            }
+            repository.SaveChanges();
+        }
+
+        private void DeletePropertiesOfProject(Guid id)
+        {
+            PropertiesOfProject[] propertiesOfProject = repository.PropertiesOfProjects
+                .Where(x => x.ProjectID == id)
+                .ToArray();
+            foreach (PropertiesOfProject property in propertiesOfProject)
+            {
+                repository.PropertiesOfProjects.DeleteObject(property);
+            }
+        }
+
+        private void DeleteHistoryOfProject(Guid id)
+        {
+            History[] histories = repository.Histories
+                .Where(x => x.ProjectID == id)
+                .ToArray();
+            foreach (History history in histories)
+            {
+                repository.Histories.DeleteObject(history);
             }
         }
 	}

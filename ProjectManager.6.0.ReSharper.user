@@ -1,0 +1,132 @@
+<Configuration>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/d:Views/d:Project/f:EditHeaders.cshtml" caret="839" fromTop="21" />
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/d:Models/d:ViewModels/f:DisplayedFieldViewModel.cs" caret="0" fromTop="0" />
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/d:Views/d:Project/f:Details.cshtml" caret="0" fromTop="0" />
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/d:Models/d:ViewModels/f:ProjectViewModel.cs" caret="988" fromTop="39" />
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/d:Views/d:Project/d:DisplayTemplates/f:ProjectViewModel.cshtml" caret="163" fromTop="4" />
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/d:Views/d:Project/d:DisplayTemplates/f:PropertyViewModel.cshtml" caret="79" fromTop="2" />
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/d:Views/d:Project/d:DisplayTemplates/f:PropertyValue.cshtml" caret="175" fromTop="4" />
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/d:Views/d:Project/d:EditorTemplates/f:ProjectViewModel.cshtml" caret="182" fromTop="4" />
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/d:Views/d:Project/d:EditorTemplates/f:PropertyViewModel.cshtml" caret="168" fromTop="4" />
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/d:Views/d:Project/d:EditorTemplates/f:PropertyValue.cshtml" caret="94" fromTop="2" />
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/f:Global.asax.cs" caret="856" fromTop="26" />
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/d:Views/d:Project/f:Edit.cshtml" caret="192" fromTop="9" />
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/d:Views/d:Project/f:List.cshtml" caret="226" fromTop="0" />
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/d:Models/f:ProjectDataManager.cs" caret="9084" fromTop="22" />
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/d:Controllers/f:ProjectController.cs" caret="3125" fromTop="36" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/d:Views/d:Project/f:List.cshtml" caret="395" fromTop="13" />
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/d:Views/d:Project/f:Edit.cshtml" caret="294" fromTop="12" />
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/d:Views/d:Project/f:Details.cshtml" caret="233" fromTop="12" />
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/d:Views/d:Project/f:Details.cshtml" caret="447" fromTop="18" />
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/d:Views/d:Project/f:List.cshtml" caret="1843" fromTop="27" />
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/d:Views/d:Project/f:List.cshtml" caret="2433" fromTop="37" />
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/d:Views/d:Project/f:List.cshtml" caret="2633" fromTop="28" />
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/d:Views/d:Project/f:EditHeaders.cshtml" caret="839" fromTop="21" />
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/d:Views/d:Project/f:Edit.cshtml" caret="119" fromTop="7" />
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/d:Views/d:Project/d:EditorTemplates/f:PropertyValue.cshtml" caret="259" fromTop="6" />
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/d:Models/d:ViewModels/f:ProjectViewModel.cs" caret="298" fromTop="7" />
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/d:Models/d:ViewModels/f:ProjectViewModel.cs" caret="543" fromTop="20" />
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/d:Models/d:ViewModels/f:ProjectViewModel.cs" caret="988" fromTop="30" />
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/d:Views/d:Project/d:EditorTemplates/f:ProjectViewModel.cshtml" caret="258" fromTop="8" />
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/d:Views/d:Project/d:DisplayTemplates/f:ProjectViewModel.cshtml" caret="163" fromTop="4" />
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/d:Views/d:Project/d:DisplayTemplates/f:PropertyViewModel.cshtml" caret="79" fromTop="2" />
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/d:Views/d:Project/d:DisplayTemplates/f:PropertyValue.cshtml" caret="175" fromTop="4" />
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/d:Views/d:Project/d:EditorTemplates/f:PropertyViewModel.cshtml" caret="168" fromTop="4" />
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/d:Views/d:Project/d:EditorTemplates/f:ProjectViewModel.cshtml" caret="182" fromTop="4" />
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/d:Views/d:Project/d:EditorTemplates/f:PropertyValue.cshtml" caret="94" fromTop="2" />
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/d:Models/f:ProjectDataManager.cs" caret="7363" fromTop="22" />
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/d:Controllers/f:ProjectController.cs" caret="779" fromTop="15" />
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/d:Views/d:Project/f:List.cshtml" caret="226" fromTop="9" />
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/d:Controllers/f:ProjectController.cs" caret="1239" fromTop="25" />
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/d:Controllers/f:ProjectController.cs" caret="2897" fromTop="17" />
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/d:Models/f:ProjectDataManager.cs" caret="10636" fromTop="49" />
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/d:Models/f:ProjectDataManager.cs" caret="9545" fromTop="7" />
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/d:Models/f:ProjectDataManager.cs" caret="10512" fromTop="25" />
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/d:Models/f:ProjectDataManager.cs" caret="9084" fromTop="17" />
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/d:Controllers/f:ProjectController.cs" caret="3125" fromTop="24" />
+    </RecentEdits>
+  </RecentFiles>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="RazorTransitionCompletionContext">
+      <Item value="using" priority="7" />
+      <Item value="Html" priority="7" />
+    </ItemStatistics>
+    <ItemStatistics item="CSharpCodeCompletionContext">
+      <Item value="using" priority="29" />
+      <Item value="Html" priority="61" />
+      <Item value="BackToUrl" priority="60" />
+      <Item value="HttpGet" priority="31" />
+      <Item value="model" priority="31" />
+      <Item value="filterString" priority="31" />
+      <Item value="repository" priority="95" />
+      <Item value="private" priority="31" />
+      <Item value="Guid`0" priority="31" />
+      <Item value="PropertiesOfProject`0" priority="31" />
+      <Item value="x" priority="31" />
+      <Item value="foreach" priority="31" />
+      <Item value="property" priority="31" />
+      <Item value="DeletePropertiesOfProject`0" priority="31" />
+      <Item value="DeleteHistoryOfProject`0" priority="31" />
+      <Item value="History`0" priority="63" />
+      <Item value="histories" priority="96" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.Mvc.HtmlHelper`1">
+      <Item value="BeginForm`0" priority="26" />
+      <Item value="DisplayFor`2" priority="26" />
+      <Item value="HiddenFor`2" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="HtmlCodeCompletionContext">
+      <Item value="left" priority="4" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Web.Mvc.FormMethod">
+      <Item value="Get" priority="26" />
+      <Item value="Post" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ProjectManager.WebUI.Models.ViewModels.PropertyValue">
+      <Item value="Value" priority="26" />
+      <Item value="RecordId" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ProjectManager.WebUI.Models.ViewModels.PropertyViewModel">
+      <Item value="PropertyName" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ProjectManager.WebUI.Models.PropertiesOfProject">
+      <Item value="RecordID" priority="26" />
+      <Item value="ProjectID" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ProjectManager.WebUI.Models.Repository">
+      <Item value="SaveChanges`0" priority="26" />
+      <Item value="PropertiesOfProjects" priority="53" />
+      <Item value="Histories" priority="80" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.Objects.ObjectSet`1">
+      <Item value="Where`0" priority="26" />
+      <Item value="DeleteObject`0" priority="49" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Linq.IQueryable`1">
+      <Item value="ToArray`1" priority="26" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir IsNull="False">
+    </NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="livetemplates.csharp.usevar">False</setting>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+</Configuration>

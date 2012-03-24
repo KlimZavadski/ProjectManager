@@ -23,9 +23,15 @@ namespace ProjectManager.WebUI
 
             routes.MapRoute(
                 "Default", // Route name
-                "{controller}/{action}/{filter}/{id}", // URL with parameters
-                new { controller = "Project", action = "List", filter = UrlParameter.Optional, id = UrlParameter.Optional } // Parameter defaults
-            );           
+                "{controller}/{action}", // URL with parameters
+                new { controller = "Project", action = "List" } // Parameter defaults
+            ); 
+
+            //routes.MapRoute(
+            //    "Default", // Route name
+            //    "{controller}/{action}/{filter}/{id}", // URL with parameters
+            //    new { controller = "Project", action = "List", filter = UrlParameter.Optional, id = UrlParameter.Optional } // Parameter defaults
+            //);           
 
         }
 

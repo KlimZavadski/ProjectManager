@@ -8,13 +8,10 @@ namespace ProjectManager.WebUI.Models.ViewModels
 {
 	public class ProjectViewModel
 	{
-        [HiddenInput(DisplayValue = false)]
         public Guid ProjectId { get; set; }
 
-        [HiddenInput(DisplayValue = false)]
         public DateTime CreateAt { get; set; }
 
-        [HiddenInput(DisplayValue = false)]
         public Guid CreateBy { get; set; }
 
 		public List<PropertyViewModel> Properties { get; set; }
@@ -28,7 +25,6 @@ namespace ProjectManager.WebUI.Models.ViewModels
 	public class PropertyViewModel
 	{      
 
-        [HiddenInput(DisplayValue = false)]
         public Guid PropertyId { get; set; } 
        
 		public String PropertyName { get; set; }
@@ -44,13 +40,10 @@ namespace ProjectManager.WebUI.Models.ViewModels
 
     public class PropertyValue
     {
-        [HiddenInput(DisplayValue = false)]
         public Guid RecordId { get; set; }
 
-        [HiddenInput(DisplayValue = false)]
         public Guid PropertyPersonIdModified { get; set; }
 
-        [HiddenInput(DisplayValue = false)]
         public DateTime PropertyDateTimeModified { get; set; }
 
         public String Value { get; set; }

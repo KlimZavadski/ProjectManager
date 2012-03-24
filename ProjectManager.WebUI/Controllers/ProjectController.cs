@@ -12,7 +12,7 @@ namespace ProjectManager.WebUI.Controllers
     {
         //String filterString = "%Coverage% < 90 && %Platform% == '.NET'";
         //BulkDownload.Import(@"c:\Bulk.csv", "Types");
-        ProjectDataManager manager;
+        private ProjectDataManager manager;
         private const String SessionDisplayedField = "DisplayedField";
         private const String SessionReturnUrl = "ReturnUrl";
 
@@ -22,7 +22,7 @@ namespace ProjectManager.WebUI.Controllers
             manager = new ProjectDataManager();
         }
         
-        public ActionResult List(String filterString)
+        public ActionResult List(String filter)
         {            
             List<String> displayedField = GetDisplayedField();
             if (displayedField == null || displayedField.Count == 0)
@@ -30,10 +30,10 @@ namespace ProjectManager.WebUI.Controllers
                 Session[SessionDisplayedField] = GetDefaultField();
             }
 
-            if (filterString != null) // TODO: and filter is valid
+            if (filter != null && filter != "") // TODO: and filter is valid
             {
-                ProjectManager.WebUI.Models.Filter filter = new ProjectManager.WebUI.Models.Filter(filterString);
-                ProjectListViewModel projectList = manager.GetProjectList(filter, GetDisplayedField().ToArray());
+                ProjectManager.WebUI.Models.Filter filters = new ProjectManager.WebUI.Models.Filter(filter);
+                ProjectListViewModel projectList = manager.GetProjectList(filters, GetDisplayedField().ToArray());
                 return View(projectList);
             }
             else
@@ -81,14 +81,12 @@ namespace ProjectManager.WebUI.Controllers
             return View("Edit", projectViewMode);
         }
 
-        [HttpPost]
         public ActionResult Delete(String returnUrl, Guid id)
         {
             Session[SessionReturnUrl] = returnUrl;
             manager.DeleteProject(id);
             return RedirectToAction("BackToUrl");
         }
-
 
         [HttpGet]
         public ActionResult EditHeaders(String returnUrl)

@@ -20,8 +20,8 @@
         </p>
     }
     <input class="actionButtons" type="submit" value="Save" />
-    <div>
-        @Html.ActionLink("Back to List", "BackToProjectList", "Project")
-    </div>
+    <p align="left" class="actionButtons">
+        <a href="@Url.Action("BackToUrl", "Project", new { returnUrl = Request.Url.PathAndQuery })">Back to List</a>
+    </p>
 }
 

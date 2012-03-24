@@ -10,12 +10,10 @@
     @Html.TextBox("filter", Request.Params["filter"])
 }
 
-@using (Html.BeginForm())
-{
-    <p align="right" class="actionButtons">
-        <a href="@Url.Action("EditHeaders", "Project", new { returnUrl = Request.Url.PathAndQuery })">Edit Displayed Field</a>
-    </p>
-}
+<p align="right" class="actionButtons">
+    <a href="@Url.Action("EditHeaders", "Project", new { returnUrl = Request.Url.PathAndQuery })">Edit Displayed Field</a>
+</p>
+
 
 <table border="1" cellpadding="10" cellspacing="0">
     <tr>
