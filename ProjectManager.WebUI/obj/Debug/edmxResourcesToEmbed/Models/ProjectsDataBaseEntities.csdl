@@ -47,9 +47,9 @@
   </EntityContainer>
   <EntityType Name="DefaultValue">
     <Key>
-      <PropertyRef Name="PropertyID" />
-      <PropertyRef Name="Value" />
+      <PropertyRef Name="ValueID" />
     </Key>
+    <Property Name="ValueID" Type="Guid" Nullable="false" />
     <Property Name="PropertyID" Type="Guid" Nullable="false" />
     <Property Name="Value" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
     <NavigationProperty Name="Property" Relationship="ProjectsDataBaseModel.FK_Values_Values" FromRole="DefaultValues" ToRole="Properties" />

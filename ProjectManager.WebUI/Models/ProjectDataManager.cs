@@ -6,34 +6,35 @@ using System.Linq;
 using System.Web;
 using System.Data.Objects;
 using ProjectManager.WebUI.Models.ViewModels;
+using System.Text.RegularExpressions;
 
 
 
 namespace ProjectManager.WebUI.Models
 {
-	public class ProjectDataManager
-	{
-		private Repository repository;
-        private const String Start = "SELECT pop.ProjectID FROM dbo.PropertiesOfProjects as pop, dbo.Properties as p WHERE"; 
+    public class ProjectDataManager
+    {
+        private Repository repository;
+        private const String Start = "SELECT pop.ProjectID FROM dbo.PropertiesOfProjects as pop, dbo.Properties as p WHERE";
 
-		public ProjectDataManager()
-		{
-			repository = new Repository();
-		}
+        public ProjectDataManager()
+        {
+            repository = new Repository();
+        }
 
         public ProjectListViewModel GetAllProjects(String[] displayedField)
-		{
+        {
             Guid[] guid = repository.Projects
                 .Select(x => x.ProjectID)
                 .ToArray<Guid>();
-			return GetProjectListById(displayedField, guid);
-		}
+            return GetProjectListById(displayedField, guid);
+        }
 
         public ProjectListViewModel GetProjectList(Filter filter, String[] headers)
-		{
-		    Guid[] projectIDs = SQLQuery(filter);
-			return GetProjectListById(headers, projectIDs);
-		}
+        {
+            Guid[] projectIDs = SQLQuery(filter);
+            return GetProjectListById(headers, projectIDs);
+        }
 
         public List<String> GetColumnList()
         {
@@ -41,7 +42,7 @@ namespace ProjectManager.WebUI.Models
                 .Select(x => x.PropertyName)
                 .ToList<String>();
         }
-        
+
 
         private Guid[] SQLQuery(Filter filter)
         {
@@ -51,10 +52,10 @@ namespace ProjectManager.WebUI.Models
         }
 
         private String GetQueryString(Filter filter, int i)
-	    {
+        {
             if (i / 2 < filter.FilterArray.Count<FilterObject>())
             {
-                return " (" + Start + " (p.PropertyName = {" + i.ToString() + "} AND pop.PropertyValue " + 
+                return " (" + Start + " (p.PropertyName = {" + i.ToString() + "} AND pop.PropertyValue " +
                     filter.FilterArray[i / 2].Sign + " {" + (i + 1).ToString() +
                     "} AND p.PropertyID = pop.PropertyID)) " + filter.FilterArray[i / 2].Operator +
                     GetQueryString(filter, i + 2);
@@ -100,16 +101,23 @@ namespace ProjectManager.WebUI.Models
             }
             else
             {
+                Project project = repository.Projects.Where(x => x.ProjectID == id).SingleOrDefault();
+                projectViewModel.ProjectId = project.ProjectID;
+                projectViewModel.CreateBy = project.CreateBy;
+                projectViewModel.CreateByName = repository.Persons
+                    .Where(x => x.PersonID == project.CreateBy).SingleOrDefault().PersonName;
+                projectViewModel.CreateAt = project.CreateAt;
                 foreach (var properties in result)
                 {
-                    PropertyViewModel propertyViewModel = GetPropertyViewModel(properties.ToArray<PropertiesOfProject>());
+                    PropertyViewModel propertyViewModel = 
+                        GetPropertyViewModel(properties.ToArray<PropertiesOfProject>());
                     projectViewModel.Properties.Add(propertyViewModel);
                 }
                 return projectViewModel;
             }
         }
 
-        private PropertyViewModel GetPropertyViewModel(PropertiesOfProject[] properties)
+        public PropertyViewModel GetPropertyViewModel(PropertiesOfProject[] properties)
         {
             if (properties.Count<PropertiesOfProject>() == 0)
             {
@@ -120,12 +128,12 @@ namespace ProjectManager.WebUI.Models
                 PropertyViewModel propertyViewModel = new PropertyViewModel();
                 propertyViewModel.PropertyId = properties[0].PropertyID;
                 propertyViewModel.PropertyName = properties[0].Property.PropertyName;
-                propertyViewModel.PropertyValues = GetPropertyValues(properties);                
+                propertyViewModel.PropertyValues = GetPropertyValues(properties);
                 return propertyViewModel;
             }
         }
 
-        private List<PropertyValue> GetPropertyValues(PropertiesOfProject[] properties)
+        public List<PropertyValue> GetPropertyValues(PropertiesOfProject[] properties)
         {
             if (properties.Count<PropertiesOfProject>() == 0)
             {
@@ -150,7 +158,7 @@ namespace ProjectManager.WebUI.Models
 
 
         public void SaveProject(ProjectViewModel projectViewModel)
-        {           
+        {
             if (projectViewModel.ProjectId == null)
             {
                 CreateProject(projectViewModel);
@@ -158,7 +166,7 @@ namespace ProjectManager.WebUI.Models
             else
             {
                 EditProject(projectViewModel);
-            }            
+            }
             repository.SaveChanges();
         }
 
@@ -275,5 +283,93 @@ namespace ProjectManager.WebUI.Models
                 repository.Histories.DeleteObject(history);
             }
         }
-	}
+        
+       
+        public void AddNewPropertyToDb(NewPropertyTransfer propertyToAdd)
+        {
+            if (repository.Properties.Where(q => q.PropertyName == propertyToAdd.PropertyName).FirstOrDefault() == null)
+            {
+                List<ValueTransfer> listValues = ParseInputValues(propertyToAdd.PropertyValues);
+                Guid PropertyType = GetNewPropertyTypeID(listValues.Count, propertyToAdd.PropertyIsNumber);               
+
+                Guid PropertyGuid = Guid.NewGuid();
+
+                repository.Properties.AddObject(new Property
+                {
+                    PropertyID = PropertyGuid,
+                    PropertyName = propertyToAdd.PropertyName,
+                    PropertyIsPublic = propertyToAdd.PropertyIsPublic,
+                    PropertyIsDefault = false,
+                    PropertyTypeID = PropertyType
+                });
+
+                foreach (var value in listValues)
+                {
+                    repository.DefaultValues.AddObject(new DefaultValue
+                    {
+                        PropertyID = PropertyGuid,
+                        Value = value.Value,
+                        ValueID = Guid.NewGuid()
+                    });                    
+
+                    if (value.IsAssigned)
+                    {
+                        repository.PropertiesOfProjects.AddObject(new PropertiesOfProject
+                        {
+                            ProjectID = propertyToAdd.ProjectId,
+                            PropertyID = PropertyGuid,
+                            RecordID = Guid.NewGuid(),
+                            PropertyPersonIDModified = Guid.Parse("e9e71093-7327-427a-86cb-50f255bc8301"),
+                            PropertyValue = value.Value,
+                            PropertyDateTimeModified = DateTime.Now
+                        });
+                    }
+                }
+                repository.SaveChanges();
+            }
+        }
+
+        private Guid GetNewPropertyTypeID(int countValues, bool isNumber)
+        {
+            if (isNumber)
+            {
+                return repository.Types.Where(q => q.TypeName == "Number").Select(q => q.TypeID).Single();
+            }
+            else
+            {
+                if (countValues == 1)
+                {
+                    return repository.Types.Where(q => q.TypeName == "String").Select(q => q.TypeID).Single();
+                }
+                else
+                {
+                    return repository.Types.Where(q => q.TypeName == "Array").Select(q => q.TypeID).Single();
+                }
+            }
+        }
+
+        private List<ValueTransfer> ParseInputValues(String inputString)
+        {
+            List<ValueTransfer> listValues = new List<ValueTransfer>();
+            ValueTransfer item = null;
+            bool change = true;
+            Regex myReg = new Regex(@"[A-z 0-9]+");
+            foreach (Match m in myReg.Matches(inputString))
+            {
+                if (change)
+                {
+                    item = new ValueTransfer();
+                    item.Value = m.Value;
+                    change = false;
+                }
+                else
+                {
+                    item.IsAssigned = bool.Parse(m.Value);
+                    listValues.Add(item);
+                    change = true;
+                }
+            }
+            return listValues;
+        }        
+    }
 }

@@ -1,8 +1,8 @@
 ﻿@model ProjectManager.WebUI.Models.ViewModels.ProjectViewModel
 
 @Html.HiddenFor(model => model.ProjectId)
-@Html.HiddenFor(model => model.CreateBy)
-@Html.HiddenFor(model => model.CreateAt)
+@Html.DisplayFor(model => model.CreateBy)
+@Html.DisplayFor(model => model.CreateAt)
 
 @Html.LabelFor(model => model.Properties)
 <br />

@@ -2,7 +2,9 @@
 @{
     ViewBag.Title = "Details";
 }
+<script src="../../Scripts/AddNewProperty.js" type="text/javascript"></script>
 <h2>Details</h2>
+@Html.HiddenFor(model=>model.ProjectId)
 @using (Html.BeginForm())
 {
     @Html.DisplayForModel()
@@ -20,3 +22,39 @@
         <a href="@Url.Action("Delete", "Project", new { returnUrl = Request.Url.PathAndQuery, id = Model.ProjectId })">Delete</a>
     </p>
 }
+
+
+
+
+<button id="property-addnew">
+    Add new property</button>
+<div id="loading-content" style="display: none;">
+    Loading data
+</div>
+<div id="dialog-addnew">
+    <h3 id="form-header">
+        Add new property</h3>
+    <div id="add_new_dialog_body">
+        <p>
+            <label>
+                New property name</label>
+            <input type="text" id="property_name" />
+        </p>
+        <p>
+            <label>
+                Is public</label>
+            <input type="checkbox" id="ispublic" />
+            <label>
+                Is number</label>
+            <input type="checkbox" id="isnumber" />
+        </p>
+        <p>
+            <label>
+                Default values</label>
+        </p>
+        <div id="values">
+        </div>
+        <input type="button" id="more" value="More" />
+        <input type="button" id="less" value="Less" />
+    </div>
+</div>

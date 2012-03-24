@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using ProjectManager.WebUI.Models;
 using ProjectManager.WebUI.Models.ViewModels;
+using System.Text.RegularExpressions;
 
 namespace ProjectManager.WebUI.Controllers
 {
@@ -23,7 +24,7 @@ namespace ProjectManager.WebUI.Controllers
         }
         
         public ActionResult List(String filter)
-        {            
+        {
             List<String> displayedField = GetDisplayedField();
             if (displayedField == null || displayedField.Count == 0)
             {
@@ -149,6 +150,13 @@ namespace ProjectManager.WebUI.Controllers
                 i++;
             }
             return defaultField;
+        }
+
+        [HttpPost]
+        public PartialViewResult AddNewPropertyDialog(NewPropertyTransfer newPropertyTransfer)
+        {
+            manager.AddNewPropertyToDb(newPropertyTransfer);
+            return PartialView();
         }
     }
 }

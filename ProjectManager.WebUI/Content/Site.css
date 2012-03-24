@@ -1,9 +1,10 @@
 body
 {
-    font-size: .85em;
-    font-family: "Trebuchet MS", Verdana, Helvetica, Sans-Serif;
+    font-size: .80em;
+    font-family: "Trebuchet MS", Calibri, Helvetica, Sans-Serif;
     color: #232323;
     background-color: #fff;
+    padding-left: 2em;
 }
 
 header,

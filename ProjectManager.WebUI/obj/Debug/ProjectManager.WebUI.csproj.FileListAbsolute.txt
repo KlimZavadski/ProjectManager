@@ -37,3 +37,29 @@ C:\Users\Klim\Documents\Visual Studio 2010\Projects\ProjectManager\ProjectManage
 C:\Users\Klim\Documents\Visual Studio 2010\Projects\ProjectManager\ProjectManager.WebUI\bin\Ninject.pdb
 C:\Users\Klim\Documents\Visual Studio 2010\Projects\ProjectManager\ProjectManager.WebUI\bin\Ninject.xml
 C:\Users\Klim\Documents\Visual Studio 2010\Projects\ProjectManager\ProjectManager.WebUI\obj\Debug\ProjectManager.WebUI.pdb
+D:\111111111111111111\ProjectManager\ProjectManager.WebUI\bin\ProjectManager.WebUI.dll
+D:\111111111111111111\ProjectManager\ProjectManager.WebUI\bin\ProjectManager.WebUI.pdb
+D:\111111111111111111\ProjectManager\ProjectManager.WebUI\bin\EntityFramework.dll
+D:\111111111111111111\ProjectManager\ProjectManager.WebUI\bin\Moq.dll
+D:\111111111111111111\ProjectManager\ProjectManager.WebUI\bin\Ninject.dll
+D:\111111111111111111\ProjectManager\ProjectManager.WebUI\bin\EntityFramework.xml
+D:\111111111111111111\ProjectManager\ProjectManager.WebUI\bin\Moq.pdb
+D:\111111111111111111\ProjectManager\ProjectManager.WebUI\bin\Moq.xml
+D:\111111111111111111\ProjectManager\ProjectManager.WebUI\bin\Ninject.pdb
+D:\111111111111111111\ProjectManager\ProjectManager.WebUI\bin\Ninject.xml
+D:\111111111111111111\ProjectManager\ProjectManager.WebUI\obj\Debug\ResolveAssemblyReference.cache
+D:\111111111111111111\ProjectManager\ProjectManager.WebUI\obj\Debug\ProjectManager.WebUI.dll
+D:\111111111111111111\ProjectManager\ProjectManager.WebUI\obj\Debug\ProjectManager.WebUI.pdb
+D:\111111111111111111\hard copy\ProjectManager\ProjectManager.WebUI\bin\ProjectManager.WebUI.dll
+D:\111111111111111111\hard copy\ProjectManager\ProjectManager.WebUI\bin\ProjectManager.WebUI.pdb
+D:\111111111111111111\hard copy\ProjectManager\ProjectManager.WebUI\bin\EntityFramework.dll
+D:\111111111111111111\hard copy\ProjectManager\ProjectManager.WebUI\bin\Moq.dll
+D:\111111111111111111\hard copy\ProjectManager\ProjectManager.WebUI\bin\Ninject.dll
+D:\111111111111111111\hard copy\ProjectManager\ProjectManager.WebUI\bin\EntityFramework.xml
+D:\111111111111111111\hard copy\ProjectManager\ProjectManager.WebUI\bin\Moq.pdb
+D:\111111111111111111\hard copy\ProjectManager\ProjectManager.WebUI\bin\Moq.xml
+D:\111111111111111111\hard copy\ProjectManager\ProjectManager.WebUI\bin\Ninject.pdb
+D:\111111111111111111\hard copy\ProjectManager\ProjectManager.WebUI\bin\Ninject.xml
+D:\111111111111111111\hard copy\ProjectManager\ProjectManager.WebUI\obj\Debug\ResolveAssemblyReference.cache
+D:\111111111111111111\hard copy\ProjectManager\ProjectManager.WebUI\obj\Debug\ProjectManager.WebUI.dll
+D:\111111111111111111\hard copy\ProjectManager\ProjectManager.WebUI\obj\Debug\ProjectManager.WebUI.pdb

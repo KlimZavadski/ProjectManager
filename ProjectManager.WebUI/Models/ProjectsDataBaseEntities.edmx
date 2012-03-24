@@ -6,12 +6,7 @@
     <edmx:StorageModels>
       <Schema Namespace="ProjectsDataBaseModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
         <EntityContainer Name="ProjectsDataBaseModelStoreContainer">
-          <EntitySet Name="DefaultValues" EntityType="ProjectsDataBaseModel.Store.DefaultValues" store:Type="Tables" store:Schema="dbo" store:Name="DefaultValues">
-            <DefiningQuery>SELECT 
-      [DefaultValues].[PropertyID] AS [PropertyID], 
-      [DefaultValues].[Value] AS [Value]
-      FROM [dbo].[DefaultValues] AS [DefaultValues]</DefiningQuery>
-          </EntitySet>
+          <EntitySet Name="DefaultValues" EntityType="ProjectsDataBaseModel.Store.DefaultValues" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="History" EntityType="ProjectsDataBaseModel.Store.History" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Persons" EntityType="ProjectsDataBaseModel.Store.Persons" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Projects" EntityType="ProjectsDataBaseModel.Store.Projects" store:Type="Tables" Schema="dbo" />
@@ -55,14 +50,11 @@
             <End Role="DefaultValues" EntitySet="DefaultValues" />
           </AssociationSet>
         </EntityContainer>
-        <!--Ошибки, обнаруженные при создании:
-      предупреждение 6002: В таблице или представлении "C:\USERS\KLIM\DOCUMENTS\VISUAL STUDIO 2010\PROJECTS\PROJECTMANAGER\PROJECTMANAGER.WEBUI\APP_DATA\PROJECTSDATABASE.MDF.dbo.DefaultValues" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.
-      -->
         <EntityType Name="DefaultValues">
           <Key>
-            <PropertyRef Name="PropertyID" />
-            <PropertyRef Name="Value" />
+            <PropertyRef Name="ValueID" />
           </Key>
+          <Property Name="ValueID" Type="uniqueidentifier" Nullable="false" />
           <Property Name="PropertyID" Type="uniqueidentifier" Nullable="false" />
           <Property Name="Value" Type="nvarchar(max)" Nullable="false" />
         </EntityType>
@@ -280,9 +272,9 @@
         </EntityContainer>
         <EntityType Name="DefaultValue">
           <Key>
-            <PropertyRef Name="PropertyID" />
-            <PropertyRef Name="Value" />
+            <PropertyRef Name="ValueID" />
           </Key>
+          <Property Name="ValueID" Type="Guid" Nullable="false" />
           <Property Name="PropertyID" Type="Guid" Nullable="false" />
           <Property Name="Value" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
           <NavigationProperty Name="Property" Relationship="ProjectsDataBaseModel.FK_Values_Values" FromRole="DefaultValues" ToRole="Properties" />
@@ -473,6 +465,7 @@
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="ProjectsDataBaseModelStoreContainer" CdmEntityContainer="Repository">
           <EntitySetMapping Name="DefaultValues"><EntityTypeMapping TypeName="ProjectsDataBaseModel.DefaultValue"><MappingFragment StoreEntitySet="DefaultValues">
+            <ScalarProperty Name="ValueID" ColumnName="ValueID" />
             <ScalarProperty Name="PropertyID" ColumnName="PropertyID" />
             <ScalarProperty Name="Value" ColumnName="Value" />
           </MappingFragment></EntityTypeMapping></EntitySetMapping>
@@ -533,66 +526,66 @@
     <!-- Diagram content (shape and connector positions) -->
     <Diagrams>
       <Diagram Name="ProjectsDataBaseEntities">
-        <EntityTypeShape EntityType="ProjectsDataBaseModel.DefaultValue" Width="1.5" PointX="5.25" PointY="4.75" Height="1.5956835937499996" IsExpanded="true" />
-        <EntityTypeShape EntityType="ProjectsDataBaseModel.History" Width="1.5" PointX="5.25" PointY="1.125" Height="2.7494921874999996" IsExpanded="true" />
-        <EntityTypeShape EntityType="ProjectsDataBaseModel.Person" Width="1.5" PointX="3" PointY="8.25" Height="1.9802864583333317" IsExpanded="true" />
-        <EntityTypeShape EntityType="ProjectsDataBaseModel.Project" Width="1.5" PointX="3" PointY="11" Height="2.1725878906249996" IsExpanded="true" />
-        <EntityTypeShape EntityType="ProjectsDataBaseModel.Property" Width="1.5" PointX="3" PointY="4.125" Height="2.7494921874999996" IsExpanded="true" />
-        <EntityTypeShape EntityType="ProjectsDataBaseModel.PropertiesOfProject" Width="1.5" PointX="5.25" PointY="7.125" Height="2.7494921874999996" IsExpanded="true" />
-        <EntityTypeShape EntityType="ProjectsDataBaseModel.Type" Width="1.5" PointX="0.75" PointY="4.75" Height="1.5956835937499996" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectsDataBaseModel.DefaultValue" Width="1.5" PointX="5.25" PointY="4.75" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectsDataBaseModel.History" Width="1.5" PointX="5.25" PointY="1.25" Height="2.7494921874999996" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectsDataBaseModel.Person" Width="1.5" PointX="3" PointY="8.375" Height="1.9802864583333317" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectsDataBaseModel.Project" Width="1.5" PointX="3" PointY="11.125" Height="2.1725878906249996" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectsDataBaseModel.Property" Width="1.5" PointX="3" PointY="4.25" Height="2.7494921874999996" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectsDataBaseModel.PropertiesOfProject" Width="1.5" PointX="5.25" PointY="7.25" Height="2.7494921874999996" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectsDataBaseModel.Type" Width="1.5" PointX="0.75" PointY="4.875" Height="1.5956835937499996" IsExpanded="true" />
         <AssociationConnector Association="ProjectsDataBaseModel.FK_Values_Values" ManuallyRouted="false">
-          <ConnectorPoint PointX="4.5" PointY="5.547841796875" />
-          <ConnectorPoint PointX="4.791666666666667" PointY="5.5478417968749989" />
-          <ConnectorPoint PointX="4.958333333333333" PointY="5.547841796875" />
-          <ConnectorPoint PointX="4.979166666666667" PointY="5.5478417968749989" />
-          <ConnectorPoint PointX="5.145833333333333" PointY="5.547841796875" />
-          <ConnectorPoint PointX="5.25" PointY="5.547841796875" />
+          <ConnectorPoint PointX="4.5" PointY="5.6439925130208337" />
+          <ConnectorPoint PointX="4.791666666666667" PointY="5.6439925130208328" />
+          <ConnectorPoint PointX="4.958333333333333" PointY="5.6439925130208337" />
+          <ConnectorPoint PointX="4.979166666666667" PointY="5.6439925130208328" />
+          <ConnectorPoint PointX="5.145833333333333" PointY="5.6439925130208337" />
+          <ConnectorPoint PointX="5.25" PointY="5.6439925130208337" />
         </AssociationConnector>
         <AssociationConnector Association="ProjectsDataBaseModel.FK_History_Persons" ManuallyRouted="false">
-          <ConnectorPoint PointX="4.5" PointY="8.2511528461538468" />
-          <ConnectorPoint PointX="4.875" PointY="7.8761528461538468" />
-          <ConnectorPoint PointX="4.875" PointY="2.49974609375" />
-          <ConnectorPoint PointX="5.25" PointY="2.49974609375" />
+          <ConnectorPoint PointX="4.5" PointY="8.3761528461538468" />
+          <ConnectorPoint PointX="4.875" PointY="8.0011528461538468" />
+          <ConnectorPoint PointX="4.875" PointY="2.62474609375" />
+          <ConnectorPoint PointX="5.25" PointY="2.62474609375" />
         </AssociationConnector>
         <AssociationConnector Association="ProjectsDataBaseModel.FK_History_Projects" ManuallyRouted="false">
-          <ConnectorPoint PointX="4.5" PointY="11.063460538461539" />
-          <ConnectorPoint PointX="5.0625" PointY="10.500960538461539" />
-          <ConnectorPoint PointX="5.0625" PointY="3.2183711406250004" />
-          <ConnectorPoint PointX="5.25" PointY="3.2183711406250004" />
+          <ConnectorPoint PointX="4.5" PointY="11.188460538461539" />
+          <ConnectorPoint PointX="5.0625" PointY="10.625960538461539" />
+          <ConnectorPoint PointX="5.0625" PointY="3.3433711406250004" />
+          <ConnectorPoint PointX="5.25" PointY="3.3433711406250004" />
         </AssociationConnector>
         <AssociationConnector Association="ProjectsDataBaseModel.FK_History_Properties" ManuallyRouted="false">
-          <ConnectorPoint PointX="3.75" PointY="4.125" />
-          <ConnectorPoint PointX="3.75" PointY="1.7811205468749991" />
-          <ConnectorPoint PointX="5.25" PointY="1.7811205468749991" />
+          <ConnectorPoint PointX="3.75" PointY="4.25" />
+          <ConnectorPoint PointX="3.75" PointY="1.9061205468749991" />
+          <ConnectorPoint PointX="5.25" PointY="1.9061205468749991" />
         </AssociationConnector>
         <AssociationConnector Association="ProjectsDataBaseModel.FK_Projects_Persons" ManuallyRouted="false">
-          <ConnectorPoint PointX="3.75" PointY="10.230286458333332" />
-          <ConnectorPoint PointX="3.75" PointY="11" />
+          <ConnectorPoint PointX="3.75" PointY="10.355286458333332" />
+          <ConnectorPoint PointX="3.75" PointY="11.125" />
         </AssociationConnector>
         <AssociationConnector Association="ProjectsDataBaseModel.FK_PropertiesOfProjects_Persons" ManuallyRouted="false">
-          <ConnectorPoint PointX="4.5" PointY="9.094075016826924" />
-          <ConnectorPoint PointX="4.979166666666667" PointY="9.094075016826924" />
-          <ConnectorPoint PointX="5.145833333333333" PointY="9.094075016826924" />
-          <ConnectorPoint PointX="5.25" PointY="9.094075016826924" />
+          <ConnectorPoint PointX="4.5" PointY="9.219075016826924" />
+          <ConnectorPoint PointX="4.979166666666667" PointY="9.219075016826924" />
+          <ConnectorPoint PointX="5.145833333333333" PointY="9.219075016826924" />
+          <ConnectorPoint PointX="5.25" PointY="9.219075016826924" />
         </AssociationConnector>
         <AssociationConnector Association="ProjectsDataBaseModel.FK_PropertiesOfProjects_PropertiesOfProjects" ManuallyRouted="false">
-          <ConnectorPoint PointX="4.5" PointY="12.149276714543269" />
-          <ConnectorPoint PointX="6" PointY="12.149276714543269" />
-          <ConnectorPoint PointX="6" PointY="9.8744921875" />
+          <ConnectorPoint PointX="4.5" PointY="12.274276714543269" />
+          <ConnectorPoint PointX="6" PointY="12.274276714543269" />
+          <ConnectorPoint PointX="6" PointY="9.9994921875" />
         </AssociationConnector>
         <AssociationConnector Association="ProjectsDataBaseModel.FK_Properties_Types" ManuallyRouted="false">
-          <ConnectorPoint PointX="2.25" PointY="5.547841796875" />
-          <ConnectorPoint PointX="3" PointY="5.547841796875" />
+          <ConnectorPoint PointX="2.25" PointY="5.672841796875" />
+          <ConnectorPoint PointX="3" PointY="5.672841796875" />
         </AssociationConnector>
         <AssociationConnector Association="ProjectsDataBaseModel.FK_PropertiesOfProjects_Properties" ManuallyRouted="false">
-          <ConnectorPoint PointX="4.5" PointY="6.8121834951923068" />
-          <ConnectorPoint PointX="4.6875" PointY="6.9996834951923068" />
-          <ConnectorPoint PointX="4.6875" PointY="6.5625" />
-          <ConnectorPoint PointX="4.8160744349011217" PointY="6.6910744349011209" />
-          <ConnectorPoint PointX="4.9339255650988791" PointY="6.8089255650988791" />
-          <ConnectorPoint PointX="5.0035744349011217" PointY="6.8785744349011209" />
-          <ConnectorPoint PointX="5.1214255650988791" PointY="6.9964255650988791" />
-          <ConnectorPoint PointX="5.25" PointY="7.125" />
+          <ConnectorPoint PointX="4.5" PointY="6.9371834951923068" />
+          <ConnectorPoint PointX="4.6875" PointY="7.1246834951923068" />
+          <ConnectorPoint PointX="4.6875" PointY="6.6875" />
+          <ConnectorPoint PointX="4.8160744349011217" PointY="6.8160744349011209" />
+          <ConnectorPoint PointX="4.9339255650988791" PointY="6.9339255650988791" />
+          <ConnectorPoint PointX="5.0035744349011217" PointY="7.0035744349011209" />
+          <ConnectorPoint PointX="5.1214255650988791" PointY="7.1214255650988791" />
+          <ConnectorPoint PointX="5.25" PointY="7.25" />
         </AssociationConnector>
       </Diagram>
     </Diagrams>

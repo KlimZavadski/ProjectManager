@@ -14,6 +14,8 @@ namespace ProjectManager.WebUI.Models.ViewModels
 
         public Guid CreateBy { get; set; }
 
+        public String CreateByName { get; set; }
+
 		public List<PropertyViewModel> Properties { get; set; }
 
 		public ProjectViewModel()
@@ -23,9 +25,8 @@ namespace ProjectManager.WebUI.Models.ViewModels
 	}
 
 	public class PropertyViewModel
-	{      
-
-        public Guid PropertyId { get; set; } 
+	{
+        public Guid PropertyId { get; set; }
        
 		public String PropertyName { get; set; }
 

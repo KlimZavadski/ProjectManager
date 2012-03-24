@@ -4,6 +4,7 @@
     <EntitySetMapping Name="DefaultValues">
       <EntityTypeMapping TypeName="ProjectsDataBaseModel.DefaultValue">
         <MappingFragment StoreEntitySet="DefaultValues">
+          <ScalarProperty Name="ValueID" ColumnName="ValueID" />
           <ScalarProperty Name="PropertyID" ColumnName="PropertyID" />
           <ScalarProperty Name="Value" ColumnName="Value" />
         </MappingFragment>

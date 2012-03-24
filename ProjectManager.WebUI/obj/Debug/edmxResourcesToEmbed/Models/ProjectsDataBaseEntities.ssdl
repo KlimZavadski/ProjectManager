@@ -1,12 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="ProjectsDataBaseModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
   <EntityContainer Name="ProjectsDataBaseModelStoreContainer">
-    <EntitySet Name="DefaultValues" EntityType="ProjectsDataBaseModel.Store.DefaultValues" store:Type="Tables" store:Schema="dbo" store:Name="DefaultValues">
-      <DefiningQuery>SELECT 
-      [DefaultValues].[PropertyID] AS [PropertyID], 
-      [DefaultValues].[Value] AS [Value]
-      FROM [dbo].[DefaultValues] AS [DefaultValues]</DefiningQuery>
-    </EntitySet>
+    <EntitySet Name="DefaultValues" EntityType="ProjectsDataBaseModel.Store.DefaultValues" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="History" EntityType="ProjectsDataBaseModel.Store.History" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Persons" EntityType="ProjectsDataBaseModel.Store.Persons" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Projects" EntityType="ProjectsDataBaseModel.Store.Projects" store:Type="Tables" Schema="dbo" />
@@ -50,14 +45,11 @@
       <End Role="DefaultValues" EntitySet="DefaultValues" />
     </AssociationSet>
   </EntityContainer>
-  <!--Ошибки, обнаруженные при создании:
-      предупреждение 6002: В таблице или представлении "C:\USERS\KLIM\DOCUMENTS\VISUAL STUDIO 2010\PROJECTS\PROJECTMANAGER\PROJECTMANAGER.WEBUI\APP_DATA\PROJECTSDATABASE.MDF.dbo.DefaultValues" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.
-      -->
   <EntityType Name="DefaultValues">
     <Key>
-      <PropertyRef Name="PropertyID" />
-      <PropertyRef Name="Value" />
+      <PropertyRef Name="ValueID" />
     </Key>
+    <Property Name="ValueID" Type="uniqueidentifier" Nullable="false" />
     <Property Name="PropertyID" Type="uniqueidentifier" Nullable="false" />
     <Property Name="Value" Type="nvarchar(max)" Nullable="false" />
   </EntityType>
