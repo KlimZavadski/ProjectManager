@@ -1,0 +1,17 @@
+﻿@model ProjectManager.WebUI.Models.ViewModels.ExportViewModel
+@{
+    ViewBag.Title = "Import";
+}
+
+<div class="ourDiv">
+    <h4>Please, choose a table from witch you want do bulk export data:</h4>
+    @using (Html.BeginForm("Import", "Project", FormMethod.Post, new { enctype = "multipart/form-data", tableName = Model.TableName }))
+    {
+        <p class="actionButtons">
+            @Html.DropDownListFor(model => model.TableName, Model.TableNamesList, "Choose any table") 
+            <input type="file" name="fileUpload"/>
+            <input type="submit" name="submit" id="submitSingle" value="Upload" class="actionButtons"/>
+            <a href="@Url.Action("BackToUrl", "Project", new { returnUrl = Request.Url.PathAndQuery })">Back to projects</a>
+        </p>
+    }
+</div>

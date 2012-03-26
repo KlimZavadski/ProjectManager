@@ -1,0 +1,97 @@
+﻿@model ProjectManager.WebUI.Models.DisplayedFieldViewModel
+@using ProjectManager.WebUI.Models
+@{
+    ViewBag.Title = "Edit Displayed Field";
+}
+<script type="text/javascript" src="jquery.js"></script>
+
+<div class="ourDiv">
+    @using (Html.BeginForm())
+    {
+        @Html.ValidationSummary()
+        for (int i = 0; i < Model.PropertiesList.Count; i++)
+        {
+            <p>
+            <h4>@((i + 1).ToString() + " Column  ")
+                @Html.DropDownListFor(x => x.PropertiesList[i], Html.ConvertToSelectList(Model.ColumnsList, Model.PropertiesList[i]), Model.PropertiesList[i])
+            </h4>
+            </p>
+        }
+        <br />
+        <p align="left" class="actionButtons">
+            <input class="actionButtons" type="submit" value="Save" />
+            <a href="@Url.Action("BackToUrl", "Project", new { returnUrl = Request.Url.PathAndQuery })">Back to Projects</a>
+        </p>
+    }
+</div>
+
+<br/>
+<br/>
+<br/>
+
+
+<a href="#" id="add">Добавить</a>
+
+
+
+
+
+<script>
+    $(document).ready(function ()
+        {
+    var i = $('input').size() + 1;
+
+    $('#add').click(function () {
+        $('<div><input type="text" class="field" name="dynamic[]" value="' + i + '" /></div>').fadeIn('slow').appendTo('.inputs');
+        i++;
+    });
+
+    $('#remove').click(function () {
+        if (i > 1) {
+            $('.field:last').remove();
+            i--;
+        }
+    });
+
+        
+        $('.submit').click(function () {
+
+
+        var answers = [];
+        $.each($('.field'), function () {
+            answers.push($(this).val());
+        });
+
+        if (answers.length == 0) {
+            answers = "none";
+        }
+
+        alert(answers);
+
+        return false;
+
+    });
+});
+</script>
+
+
+<style>
+input
+{
+	border:1px solid #ccc;
+	padding:8px;
+	font-size:14px;
+	width:300px;
+}
+	
+.submit
+{
+	width:110px;
+	background-color:#FF6;
+	padding:3px;
+	border:1px solid #FC0;
+	margin-top:20px;
+}	
+
+</style>
+

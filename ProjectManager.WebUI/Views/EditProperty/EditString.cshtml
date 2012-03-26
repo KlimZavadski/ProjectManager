@@ -1,0 +1,9 @@
+﻿@model ProjectManager.WebUI.Models.MyString
+<div id="ifok" name=@ViewBag.OK>
+</div>
+<p class="validation-summary-errors">
+    @Html.DisplayFor(model => model.ErrorMessage)
+</p>
+<p align="center">
+    @Html.EditorFor(model => model.Value)
+</p>

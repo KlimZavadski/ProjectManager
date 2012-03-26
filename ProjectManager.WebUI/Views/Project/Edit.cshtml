@@ -1,0 +1,15 @@
+﻿@model ProjectManager.WebUI.Models.ViewModels.ProjectViewModel
+@{
+    ViewBag.Title = "Edit";
+}
+
+
+@using (Html.BeginForm("Edit", "Project"))
+{
+    @Html.EditorForModel()
+
+    <p align="left" class="actionButtons">
+        <input type="submit" value="Save" class="actionButtons"/>
+        <a href="@Url.Action("BackToUrl", "Project")">Back to projects</a>
+    </p>
+}

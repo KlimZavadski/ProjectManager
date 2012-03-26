@@ -1,0 +1,16 @@
+﻿@model ProjectManager.WebUI.Models.ViewModels.ExportViewModel
+@{
+    ViewBag.Title = "Export";
+}
+
+<div class="ourDiv">
+    <h4>Please, choose a table in witch you want bulk insert data:</h4>
+    @using (Html.BeginForm())
+    {
+        <p align="left" class="actionButtons">
+            @Html.DropDownListFor(model => model.TableName, Model.TableNamesList, "Choose any table")
+            <input type="submit" value="Export in file" class="actionButtons"/>    
+            <a href="@Url.Action("BackToUrl", "Project")">Back to projects</a>
+        </p>
+    }
+</div>

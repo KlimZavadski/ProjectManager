@@ -1,0 +1,11 @@
+C:\Users\aliaksandr\documents\visual studio 2010\Projects\ProjectManager\ProjectManager.Domain\bin\Debug\ProjectManager.Domain.dll
+C:\Users\aliaksandr\documents\visual studio 2010\Projects\ProjectManager\ProjectManager.Domain\bin\Debug\ProjectManager.Domain.pdb
+C:\Users\aliaksandr\documents\visual studio 2010\Projects\ProjectManager\ProjectManager.Domain\bin\Debug\Moq.dll
+C:\Users\aliaksandr\documents\visual studio 2010\Projects\ProjectManager\ProjectManager.Domain\bin\Debug\Ninject.dll
+C:\Users\aliaksandr\documents\visual studio 2010\Projects\ProjectManager\ProjectManager.Domain\bin\Debug\Moq.pdb
+C:\Users\aliaksandr\documents\visual studio 2010\Projects\ProjectManager\ProjectManager.Domain\bin\Debug\Moq.xml
+C:\Users\aliaksandr\documents\visual studio 2010\Projects\ProjectManager\ProjectManager.Domain\bin\Debug\Ninject.pdb
+C:\Users\aliaksandr\documents\visual studio 2010\Projects\ProjectManager\ProjectManager.Domain\bin\Debug\Ninject.xml
+C:\Users\aliaksandr\documents\visual studio 2010\Projects\ProjectManager\ProjectManager.Domain\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\aliaksandr\documents\visual studio 2010\Projects\ProjectManager\ProjectManager.Domain\obj\Debug\ProjectManager.Domain.dll
+C:\Users\aliaksandr\documents\visual studio 2010\Projects\ProjectManager\ProjectManager.Domain\obj\Debug\ProjectManager.Domain.pdb

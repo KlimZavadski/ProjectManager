@@ -1,0 +1,67 @@
+c:\users\aliaksandr\documents\visual studio 2010\Projects\ProjectManager\ProjectManager.UnitTests\bin\Debug\ProjectManager.UnitTests.dll
+c:\users\aliaksandr\documents\visual studio 2010\Projects\ProjectManager\ProjectManager.UnitTests\bin\Debug\ProjectManager.UnitTests.pdb
+c:\users\aliaksandr\documents\visual studio 2010\Projects\ProjectManager\ProjectManager.UnitTests\obj\Debug\ResolveAssemblyReference.cache
+c:\users\aliaksandr\documents\visual studio 2010\Projects\ProjectManager\ProjectManager.UnitTests\obj\Debug\ProjectManager.UnitTests.dll
+c:\users\aliaksandr\documents\visual studio 2010\Projects\ProjectManager\ProjectManager.UnitTests\obj\Debug\ProjectManager.UnitTests.pdb
+C:\Users\aliaksandr\documents\visual studio 2010\Projects\ProjectManager\ProjectManager.UnitTests\bin\Debug\Moq.dll
+C:\Users\aliaksandr\documents\visual studio 2010\Projects\ProjectManager\ProjectManager.UnitTests\bin\Debug\Ninject.dll
+C:\Users\aliaksandr\documents\visual studio 2010\Projects\ProjectManager\ProjectManager.UnitTests\bin\Debug\ProjectManager.WebUI.dll
+C:\Users\aliaksandr\documents\visual studio 2010\Projects\ProjectManager\ProjectManager.UnitTests\bin\Debug\ProjectManager.WebUI.pdb
+C:\Users\aliaksandr\documents\visual studio 2010\Projects\ProjectManager\ProjectManager.UnitTests\bin\Debug\Moq.pdb
+C:\Users\aliaksandr\documents\visual studio 2010\Projects\ProjectManager\ProjectManager.UnitTests\bin\Debug\Moq.xml
+C:\Users\aliaksandr\documents\visual studio 2010\Projects\ProjectManager\ProjectManager.UnitTests\bin\Debug\Ninject.pdb
+C:\Users\aliaksandr\documents\visual studio 2010\Projects\ProjectManager\ProjectManager.UnitTests\bin\Debug\Ninject.xml
+C:\STUDENTS\ProjectManager\ProjectManager.UnitTests\bin\Debug\ProjectManager.UnitTests.dll
+C:\STUDENTS\ProjectManager\ProjectManager.UnitTests\bin\Debug\ProjectManager.UnitTests.pdb
+C:\STUDENTS\ProjectManager\ProjectManager.UnitTests\bin\Debug\Moq.dll
+C:\STUDENTS\ProjectManager\ProjectManager.UnitTests\bin\Debug\Ninject.dll
+C:\STUDENTS\ProjectManager\ProjectManager.UnitTests\bin\Debug\ProjectManager.WebUI.dll
+C:\STUDENTS\ProjectManager\ProjectManager.UnitTests\bin\Debug\ProjectManager.WebUI.pdb
+C:\STUDENTS\ProjectManager\ProjectManager.UnitTests\bin\Debug\Moq.pdb
+C:\STUDENTS\ProjectManager\ProjectManager.UnitTests\bin\Debug\Moq.xml
+C:\STUDENTS\ProjectManager\ProjectManager.UnitTests\bin\Debug\Ninject.pdb
+C:\STUDENTS\ProjectManager\ProjectManager.UnitTests\bin\Debug\Ninject.xml
+C:\STUDENTS\ProjectManager\ProjectManager.UnitTests\obj\Debug\ResolveAssemblyReference.cache
+C:\STUDENTS\ProjectManager\ProjectManager.UnitTests\obj\Debug\ProjectManager.UnitTests.dll
+C:\STUDENTS\ProjectManager\ProjectManager.UnitTests\obj\Debug\ProjectManager.UnitTests.pdb
+C:\Users\Klim\Documents\Visual Studio 2010\Projects\ProjectManager\ProjectManager.UnitTests\bin\Debug\ProjectManager.UnitTests.dll
+C:\Users\Klim\Documents\Visual Studio 2010\Projects\ProjectManager\ProjectManager.UnitTests\bin\Debug\ProjectManager.UnitTests.pdb
+C:\Users\Klim\Documents\Visual Studio 2010\Projects\ProjectManager\ProjectManager.UnitTests\bin\Debug\Moq.dll
+C:\Users\Klim\Documents\Visual Studio 2010\Projects\ProjectManager\ProjectManager.UnitTests\bin\Debug\Ninject.dll
+C:\Users\Klim\Documents\Visual Studio 2010\Projects\ProjectManager\ProjectManager.UnitTests\bin\Debug\ProjectManager.WebUI.dll
+C:\Users\Klim\Documents\Visual Studio 2010\Projects\ProjectManager\ProjectManager.UnitTests\bin\Debug\ProjectManager.WebUI.pdb
+C:\Users\Klim\Documents\Visual Studio 2010\Projects\ProjectManager\ProjectManager.UnitTests\bin\Debug\Moq.pdb
+C:\Users\Klim\Documents\Visual Studio 2010\Projects\ProjectManager\ProjectManager.UnitTests\bin\Debug\Moq.xml
+C:\Users\Klim\Documents\Visual Studio 2010\Projects\ProjectManager\ProjectManager.UnitTests\bin\Debug\Ninject.pdb
+C:\Users\Klim\Documents\Visual Studio 2010\Projects\ProjectManager\ProjectManager.UnitTests\bin\Debug\Ninject.xml
+C:\Users\Klim\Documents\Visual Studio 2010\Projects\ProjectManager\ProjectManager.UnitTests\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Klim\Documents\Visual Studio 2010\Projects\ProjectManager\ProjectManager.UnitTests\obj\Debug\ProjectManager.UnitTests.dll
+C:\Users\Klim\Documents\Visual Studio 2010\Projects\ProjectManager\ProjectManager.UnitTests\obj\Debug\ProjectManager.UnitTests.pdb
+D:\111111111111111111\ProjectManager\ProjectManager.UnitTests\bin\Debug\ProjectManager.UnitTests.dll
+D:\111111111111111111\ProjectManager\ProjectManager.UnitTests\bin\Debug\ProjectManager.UnitTests.pdb
+D:\111111111111111111\ProjectManager\ProjectManager.UnitTests\bin\Debug\Moq.dll
+D:\111111111111111111\ProjectManager\ProjectManager.UnitTests\bin\Debug\Ninject.dll
+D:\111111111111111111\ProjectManager\ProjectManager.UnitTests\bin\Debug\ProjectManager.WebUI.dll
+D:\111111111111111111\ProjectManager\ProjectManager.UnitTests\bin\Debug\ProjectManager.WebUI.pdb
+D:\111111111111111111\ProjectManager\ProjectManager.UnitTests\bin\Debug\Moq.pdb
+D:\111111111111111111\ProjectManager\ProjectManager.UnitTests\bin\Debug\Moq.xml
+D:\111111111111111111\ProjectManager\ProjectManager.UnitTests\bin\Debug\Ninject.pdb
+D:\111111111111111111\ProjectManager\ProjectManager.UnitTests\bin\Debug\Ninject.xml
+D:\111111111111111111\ProjectManager\ProjectManager.UnitTests\obj\Debug\ResolveAssemblyReference.cache
+D:\111111111111111111\ProjectManager\ProjectManager.UnitTests\obj\Debug\ProjectManager.UnitTests.dll
+D:\111111111111111111\ProjectManager\ProjectManager.UnitTests\obj\Debug\ProjectManager.UnitTests.pdb
+D:\111111111111111111\hard copy\ProjectManager\ProjectManager.UnitTests\bin\Debug\ProjectManager.UnitTests.dll
+D:\111111111111111111\hard copy\ProjectManager\ProjectManager.UnitTests\bin\Debug\ProjectManager.UnitTests.pdb
+D:\111111111111111111\hard copy\ProjectManager\ProjectManager.UnitTests\bin\Debug\Moq.dll
+D:\111111111111111111\hard copy\ProjectManager\ProjectManager.UnitTests\bin\Debug\Ninject.dll
+D:\111111111111111111\hard copy\ProjectManager\ProjectManager.UnitTests\bin\Debug\ProjectManager.WebUI.dll
+D:\111111111111111111\hard copy\ProjectManager\ProjectManager.UnitTests\bin\Debug\ProjectManager.WebUI.pdb
+D:\111111111111111111\hard copy\ProjectManager\ProjectManager.UnitTests\bin\Debug\Moq.pdb
+D:\111111111111111111\hard copy\ProjectManager\ProjectManager.UnitTests\bin\Debug\Moq.xml
+D:\111111111111111111\hard copy\ProjectManager\ProjectManager.UnitTests\bin\Debug\Ninject.pdb
+D:\111111111111111111\hard copy\ProjectManager\ProjectManager.UnitTests\bin\Debug\Ninject.xml
+D:\111111111111111111\hard copy\ProjectManager\ProjectManager.UnitTests\obj\Debug\ResolveAssemblyReference.cache
+D:\111111111111111111\hard copy\ProjectManager\ProjectManager.UnitTests\obj\Debug\ProjectManager.UnitTests.dll
+D:\111111111111111111\hard copy\ProjectManager\ProjectManager.UnitTests\obj\Debug\ProjectManager.UnitTests.pdb
+C:\STUDENTS\ProjectManager\ProjectManager.UnitTests\bin\Debug\LINQtoCSV.dll
+C:\STUDENTS\ProjectManager\ProjectManager.UnitTests\bin\Debug\LINQtoCSV.pdb

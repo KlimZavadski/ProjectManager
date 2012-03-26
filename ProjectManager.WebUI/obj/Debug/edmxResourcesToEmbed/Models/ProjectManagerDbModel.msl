@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="projectmanagerdbModelStoreContainer" CdmEntityContainer="repository">
+    <EntitySetMapping Name="HistoryRecords">
+      <EntityTypeMapping TypeName="projectmanagerdbModel.HistoryRecord">
+        <MappingFragment StoreEntitySet="HistoryRecords">
+          <ScalarProperty Name="H_ProjectId" ColumnName="H_ProjectId" />
+          <ScalarProperty Name="H_PropertyId" ColumnName="H_PropertyId" />
+          <ScalarProperty Name="H_PropertyValue" ColumnName="H_PropertyValue" />
+          <ScalarProperty Name="H_PropertyDateModified" ColumnName="H_PropertyDateModified" />
+          <ScalarProperty Name="H_PropertyPersonId" ColumnName="H_PropertyPersonId" />
+          <ScalarProperty Name="HistoryRecordsPK" ColumnName="HistoryRecordsPK" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Persons">
+      <EntityTypeMapping TypeName="projectmanagerdbModel.Person">
+        <MappingFragment StoreEntitySet="Persons">
+          <ScalarProperty Name="PersonId" ColumnName="PersonId" />
+          <ScalarProperty Name="PersonName" ColumnName="PersonName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Projects">
+      <EntityTypeMapping TypeName="projectmanagerdbModel.Project">
+        <MappingFragment StoreEntitySet="Projects">
+          <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+          <ScalarProperty Name="PropertyId" ColumnName="PropertyId" />
+          <ScalarProperty Name="PropertyValue" ColumnName="PropertyValue" />
+          <ScalarProperty Name="PropertyDateModified" ColumnName="PropertyDateModified" />
+          <ScalarProperty Name="PropertyPersonId" ColumnName="PropertyPersonId" />
+          <ScalarProperty Name="ProjectsPK" ColumnName="ProjectsPK" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Properties">
+      <EntityTypeMapping TypeName="projectmanagerdbModel.Property">
+        <MappingFragment StoreEntitySet="Properties">
+          <ScalarProperty Name="PropertyId" ColumnName="PropertyId" />
+          <ScalarProperty Name="PropertyName" ColumnName="PropertyName" />
+          <ScalarProperty Name="PropertyIsPublic" ColumnName="PropertyIsPublic" />
+          <ScalarProperty Name="PropertyIsDefault" ColumnName="PropertyIsDefault" />
+          <ScalarProperty Name="PropertyTypeId" ColumnName="PropertyTypeId" />
+          <ScalarProperty Name="PropertyCanModify" ColumnName="PropertyCanModify" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PropertyDefaultValues">
+      <EntityTypeMapping TypeName="projectmanagerdbModel.PropertyDefaultValue">
+        <MappingFragment StoreEntitySet="PropertyDefaultValues">
+          <ScalarProperty Name="PropertyId" ColumnName="PropertyId" />
+          <ScalarProperty Name="PropertyValue" ColumnName="PropertyValue" />
+          <ScalarProperty Name="PropertyDefaultValuesPK" ColumnName="PropertyDefaultValuesPK" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Types">
+      <EntityTypeMapping TypeName="projectmanagerdbModel.Type">
+        <MappingFragment StoreEntitySet="Types">
+          <ScalarProperty Name="TypeId" ColumnName="TypeId" />
+          <ScalarProperty Name="TypeName" ColumnName="TypeName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

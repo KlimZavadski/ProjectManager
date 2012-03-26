@@ -1,0 +1,593 @@
+<Configuration>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/d:Views/d:Shared/f:_Layout.cshtml" caret="132" fromTop="4" />
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/d:Models/d:ViewModels/f:ProjectViewModel.cs" caret="0" fromTop="0" />
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/d:Views/d:Project/d:EditorTemplates/f:PropertyViewModel.cshtml" caret="168" fromTop="4" />
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/d:Views/d:Project/d:DisplayTemplates/f:PropertyValue.cshtml" caret="0" fromTop="0" />
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/d:Views/d:Project/d:EditorTemplates/f:ProjectViewModel.cshtml" caret="193" fromTop="5" />
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/d:Views/d:Project/f:Add.cshtml" caret="224" fromTop="8" />
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/d:Models/f:DataModel.cs" caret="1059" fromTop="25" />
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/d:Controllers/f:EditPropertyController.cs" caret="0" fromTop="0" />
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/d:Views/d:Project/d:DisplayTemplates/f:ProjectViewModel.cshtml" caret="446" fromTop="11" />
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/d:Views/d:Project/d:DisplayTemplates/f:PropertyViewModel.cshtml" caret="390" fromTop="12" />
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/d:Views/d:EditProperty/f:EditString.cshtml" caret="200" fromTop="6" />
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/d:Content/f:Site.css" caret="2766" fromTop="16" />
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/d:Models/f:ProjectDataManager.cs" caret="6350" fromTop="14" />
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/d:Controllers/f:ProjectController.cs" caret="387" fromTop="2" />
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/d:Models/f:Filter.cs" caret="0" fromTop="0" />
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/d:Models/f:HtmlHelperExtension.cs" caret="0" fromTop="0" />
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/f:Web.config" caret="2743" fromTop="27" />
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/d:Models/f:WebConfigWorker.cs" caret="648" fromTop="15" />
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/d:Models/f:ProjectDataBaseEntities2.cs" caret="209" fromTop="11" />
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/d:Models/f:ProjectsDataBaseEntities.Designer.cs" caret="0" fromTop="0" />
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/d:Models/d:ViewModels/f:ExportViewModel.cs" caret="359" fromTop="12" />
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/d:Scripts/f:AddNewProperty.js" caret="3059" fromTop="0" />
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/d:Scripts/f:FunctionalityDetails.js" caret="216" fromTop="8" />
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/d:Scripts/f:EditProperty.js" caret="2487" fromTop="78" />
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/d:Views/d:Project/d:EditorTemplates/f:PropertyValue.cshtml" caret="262" fromTop="7" />
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/d:Views/d:Project/f:Details.cshtml" caret="1301" fromTop="21" />
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/d:Views/d:Project/f:List.cshtml" caret="673" fromTop="19" />
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/d:Views/d:Project/f:EditHeaders.cshtml" caret="493" fromTop="15" />
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/f:packages.config" caret="0" fromTop="0" />
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/f:Global.asax.cs" caret="1430" fromTop="40" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/d:Content/f:Site.css" caret="1804" fromTop="32" />
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/d:Views/d:Project/f:Details.cshtml" caret="771" fromTop="22" />
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/d:Views/d:Project/f:Details.cshtml" caret="814" fromTop="26" />
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/d:Views/d:Project/f:Details.cshtml" caret="150" fromTop="7" />
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/d:Content/f:Site.css" caret="1659" fromTop="42" />
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/d:Content/f:Site.css" caret="3461" fromTop="47" />
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/d:Views/d:EditProperty/f:EditString.cshtml" caret="200" fromTop="6" />
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/d:Content/f:Site.css" caret="1653" fromTop="18" />
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/d:Content/f:Site.css" caret="3474" fromTop="36" />
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/d:Views/d:Project/d:DisplayTemplates/f:PropertyViewModel.cshtml" caret="390" fromTop="12" />
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/d:Content/f:Site.css" caret="215" fromTop="9" />
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/d:Scripts/f:FunctionalityDetails.js" caret="807" fromTop="35" />
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/d:Scripts/f:FunctionalityDetails.js" caret="920" fromTop="40" />
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/d:Scripts/f:FunctionalityDetails.js" caret="22" fromTop="0" />
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/d:Views/d:Project/f:List.cshtml" caret="3508" fromTop="28" />
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/d:Content/f:Site.css" caret="3705" fromTop="28" />
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/d:Content/f:Site.css" caret="3705" fromTop="30" />
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/d:Views/d:Project/f:List.cshtml" caret="2996" fromTop="18" />
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/d:Views/d:Project/f:List.cshtml" caret="3342" fromTop="22" />
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/d:Views/d:Project/f:List.cshtml" caret="3508" fromTop="35" />
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/d:Views/d:Project/f:List.cshtml" caret="2644" fromTop="35" />
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/d:Views/d:Project/f:List.cshtml" caret="503" fromTop="15" />
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/d:Content/f:Site.css" caret="3207" fromTop="30" />
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/d:Content/f:Site.css" caret="2766" fromTop="16" />
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/d:Views/d:Project/f:Details.cshtml" caret="779" fromTop="21" />
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/d:Views/d:Project/f:EditHeaders.cshtml" caret="652" fromTop="18" />
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/d:Models/f:WebConfigWorker.cs" caret="750" fromTop="20" />
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/d:Models/f:ProjectDataBaseEntities2.cs" caret="199" fromTop="9" />
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/f:Global.asax.cs" caret="1529" fromTop="21" />
+      <File id="F890A2A3-A091-4485-B43E-8478F91B25B1/f:Global.asax.cs" caret="1478" fromTop="11" />
+    </RecentEdits>
+  </RecentFiles>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="RazorTransitionCompletionContext">
+      <Item value="using" priority="33" />
+      <Item value="Html" priority="59" />
+      <Item value="ViewBag" priority="23" />
+    </ItemStatistics>
+    <ItemStatistics item="CSharpCodeCompletionContext">
+      <Item value="using" priority="150" />
+      <Item value="Html" priority="305" />
+      <Item value="BackToUrl" priority="187" />
+      <Item value="HttpGet" priority="31" />
+      <Item value="model" priority="191" />
+      <Item value="filterString" priority="95" />
+      <Item value="repository" priority="320" />
+      <Item value="private" priority="319" />
+      <Item value="Guid`0" priority="321" />
+      <Item value="PropertiesOfProject`0" priority="31" />
+      <Item value="x" priority="287" />
+      <Item value="foreach" priority="63" />
+      <Item value="property" priority="64" />
+      <Item value="DeletePropertiesOfProject`0" priority="31" />
+      <Item value="DeleteHistoryOfProject`0" priority="31" />
+      <Item value="History`0" priority="63" />
+      <Item value="histories" priority="96" />
+      <Item value="public" priority="351" />
+      <Item value="static" priority="127" />
+      <Item value="String`0" priority="607" />
+      <Item value="true" priority="31" />
+      <Item value="Filter`0" priority="31" />
+      <Item value="Regex`0" priority="63" />
+      <Item value="new" priority="511" />
+      <Item value="Regex" priority="26" />
+      <Item value="Redirect`0" priority="31" />
+      <Item value="RedirectToAction`0" priority="85" />
+      <Item value="SelectList`0" priority="31" />
+      <Item value="selectListItems" priority="119" />
+      <Item value="List&lt;SelectListItem&gt;" priority="28" />
+      <Item value="columnList" priority="26" />
+      <Item value="byte" priority="26" />
+      <Item value="newColumnList" priority="95" />
+      <Item value="currentItem" priority="31" />
+      <Item value="return" priority="447" />
+      <Item value="displayedFieldViewModel" priority="54" />
+      <Item value="ProjectManager.WebUI" priority="24" />
+      <Item value="Models" priority="20" />
+      <Item value="Model" priority="127" />
+      <Item value="Dictionary&lt;string,object&gt;" priority="28" />
+      <Item value="ViewBag" priority="121" />
+      <Item value="ExportImport" priority="60" />
+      <Item value="HttpPostAttribute`0" priority="63" />
+      <Item value="HttpPost" priority="31" />
+      <Item value="View`0" priority="95" />
+      <Item value="Import" priority="55" />
+      <Item value="Export" priority="32" />
+      <Item value="Project" priority="32" />
+      <Item value="filename" priority="31" />
+      <Item value="fullFileName" priority="95" />
+      <Item value="fileName" priority="378" />
+      <Item value="tableName" priority="255" />
+      <Item value="Repository" priority="28" />
+      <Item value="bulkInsert" priority="31" />
+      <Item value="ObjectParameter" priority="28" />
+      <Item value="commandString" priority="31" />
+      <Item value="File`0" priority="149" />
+      <Item value="void" priority="95" />
+      <Item value="this" priority="191" />
+      <Item value="ExportViewModel`0" priority="186" />
+      <Item value="TableName" priority="95" />
+      <Item value="FilterString" priority="31" />
+      <Item value="exportViewModel" priority="353" />
+      <Item value="ExportViewModel" priority="28" />
+      <Item value="filter" priority="95" />
+      <Item value="returnUrl" priority="31" />
+      <Item value="List" priority="95" />
+      <Item value="List&lt;string&gt;" priority="57" />
+      <Item value="listTableNames" priority="63" />
+      <Item value="null" priority="127" />
+      <Item value="FormMethod`0" priority="58" />
+      <Item value="HiddenFor`2" priority="7" />
+      <Item value="if" priority="191" />
+      <Item value="Bulk`0" priority="31" />
+      <Item value="Repository`0" priority="31" />
+      <Item value="LINQtoCSV" priority="30" />
+      <Item value="CsvColumnAttribute`0" priority="31" />
+      <Item value="var" priority="351" />
+      <Item value="DefaultValue`0" priority="63" />
+      <Item value="csvContext" priority="58" />
+      <Item value="csvFileDescription" priority="63" />
+      <Item value="OutputFormat" priority="63" />
+      <Item value="result" priority="95" />
+      <Item value="int" priority="191" />
+      <Item value="StreamWriter" priority="57" />
+      <Item value="downloadPath" priority="58" />
+      <Item value="uploadPath" priority="90" />
+      <Item value="writer" priority="95" />
+      <Item value="defaultValue" priority="95" />
+      <Item value="Dictionary" priority="63" />
+      <Item value="HashSet" priority="31" />
+      <Item value="IEnumerable" priority="127" />
+      <Item value="switch" priority="31" />
+      <Item value="case" priority="31" />
+      <Item value="manager" priority="127" />
+      <Item value="pathFile" priority="31" />
+      <Item value="fullPathFileName" priority="223" />
+      <Item value="res" priority="31" />
+      <Item value="object" priority="30" />
+      <Item value="CanBeNull" priority="31" />
+      <Item value="break" priority="31" />
+      <Item value="fileUpload" priority="127" />
+      <Item value="streamReader" priority="96" />
+      <Item value="StreamReader" priority="28" />
+      <Item value="input" priority="31" />
+      <Item value="StreamWriter`0" priority="31" />
+      <Item value="streamWriter" priority="96" />
+      <Item value="DeleteEmptyField`0" priority="31" />
+      <Item value="Path`0" priority="63" />
+      <Item value="Stream`0" priority="31" />
+      <Item value="IODescriptionAttribute`0" priority="31" />
+      <Item value="System" priority="63" />
+      <Item value="IO" priority="53" />
+      <Item value="queryString" priority="31" />
+      <Item value="Start" priority="31" />
+      <Item value="double" priority="31" />
+      <Item value="Double`0" priority="31" />
+      <Item value="value" priority="351" />
+      <Item value="Int32`0" priority="31" />
+      <Item value="out" priority="31" />
+      <Item value="int_number" priority="63" />
+      <Item value="double_number" priority="90" />
+      <Item value="while" priority="63" />
+      <Item value="newValue" priority="63" />
+      <Item value="count" priority="63" />
+      <Item value="nulls" priority="63" />
+      <Item value="CountNumbersInValues" priority="31" />
+      <Item value="AddValue`0" priority="87" />
+      <Item value="projectViewModel" priority="448" />
+      <Item value="y" priority="31" />
+      <Item value="XmlSiteMapProvider`0" priority="31" />
+      <Item value="PropertyValue`0" priority="31" />
+      <Item value="propertyValue" priority="64" />
+      <Item value="titlePropertyViewModel" priority="95" />
+      <Item value="MoveTitlePropertyFirst`0" priority="31" />
+      <Item value="projectViewMode" priority="31" />
+      <Item value="EditorForModel`0" priority="3" />
+      <Item value="p" priority="59" />
+      <Item value="Environment`0" priority="63" />
+      <Item value="EditorFor`2" priority="3" />
+      <Item value="List&lt;PropertyViewModel&gt;" priority="28" />
+      <Item value="List&lt;PropertyValue&gt;" priority="28" />
+      <Item value="PropertyViewModel`0" priority="63" />
+      <Item value="propertyViewModel" priority="182" />
+      <Item value="PropertyViewModel" priority="28" />
+      <Item value="SetTitleProperty`0" priority="31" />
+      <Item value="DateTime`0" priority="31" />
+      <Item value="PropertyValue" priority="28" />
+      <Item value="Url" priority="31" />
+      <Item value="Edit" priority="27" />
+      <Item value="RecordId" priority="55" />
+      <Item value="string" priority="63" />
+      <Item value="class" priority="30" />
+      <Item value="a`0" priority="31" />
+      <Item value="a" priority="58" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.Mvc.HtmlHelper`1">
+      <Item value="BeginForm`0" priority="134" />
+      <Item value="DisplayFor`2" priority="80" />
+      <Item value="HiddenFor`2" priority="134" />
+      <Item value="ConvertToSelectList`0" priority="26" />
+      <Item value="DropDownListFor`2" priority="26" />
+      <Item value="Editor`0" priority="22" />
+      <Item value="EditorForModel`0" priority="26" />
+      <Item value="EditorFor`2" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="HtmlCodeCompletionContext">
+      <Item value="left" priority="16" />
+      <Item value="ProjectManager.WebUI" priority="4" />
+      <Item value="Models" priority="4" />
+      <Item value="th" priority="5" />
+      <Item value="class" priority="229" />
+      <Item value="ui-icon" priority="5" />
+      <Item value="a" priority="57" />
+      <Item value="href" priority="11" />
+      <Item value=".." priority="22" />
+      <Item value="Content" priority="11" />
+      <Item value="Images" priority="11" />
+      <Item value="img" priority="12" />
+      <Item value="src" priority="12" />
+      <Item value="." priority="5" />
+      <Item value="Settings.png" priority="4" />
+      <Item value="hidden" priority="6" />
+      <Item value="width" priority="13" />
+      <Item value="align" priority="47" />
+      <Item value="right" priority="48" />
+      <Item value="td" priority="5" />
+      <Item value="filterText" priority="5" />
+      <Item value="settings_10p.png" priority="4" />
+      <Item value="header" priority="11" />
+      <Item value="ourHeader" priority="16" />
+      <Item value="ourTitle" priority="15" />
+      <Item value="div" priority="89" />
+      <Item value="ourDiv" priority="28" />
+      <Item value="actionButtons" priority="120" />
+      <Item value="type" priority="11" />
+      <Item value="h3" priority="23" />
+      <Item value="h5" priority="5" />
+      <Item value="p" priority="63" />
+      <Item value="id" priority="32" />
+      <Item value="input" priority="11" />
+      <Item value="value" priority="11" />
+      <Item value="style" priority="59" />
+      <Item value="color" priority="6" />
+      <Item value="br" priority="73" />
+      <Item value="margin-right" priority="25" />
+      <Item value="&amp;AElig;" priority="0" />
+      <Item value="h4" priority="17" />
+      <Item value="submit" priority="5" />
+      <Item value="resetProperties" priority="17" />
+      <Item value="alt" priority="6" />
+      <Item value="margin-left" priority="15" />
+      <Item value="required" priority="5" />
+      <Item value="onclick" priority="4" />
+      <Item value="ourText" priority="17" />
+      <Item value="script" priority="5" />
+      <Item value="validation-summary-errors" priority="5" />
+      <Item value="center" priority="5" />
+      <Item value="form_input" priority="6" />
+      <Item value="editButton" priority="6" />
+      <Item value="margin-top" priority="6" />
+      <Item value="settingsButton" priority="6" />
+      <Item value="padding" priority="6" />
+      <Item value="padding-left" priority="4" />
+      <Item value="font-size" priority="6" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Web.Mvc.FormMethod">
+      <Item value="Get" priority="26" />
+      <Item value="Post" priority="80" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ProjectManager.WebUI.Models.ViewModels.PropertyValue">
+      <Item value="Value" priority="80" />
+      <Item value="RecordId" priority="108" />
+      <Item value="PropertyDateTimeModified" priority="26" />
+      <Item value="PropertyPersonIdModified" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ProjectManager.WebUI.Models.ViewModels.PropertyViewModel">
+      <Item value="PropertyName" priority="215" />
+      <Item value="PropertyValues" priority="103" />
+      <Item value="PropertyId" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ProjectManager.WebUI.Models.PropertiesOfProject">
+      <Item value="RecordID" priority="26" />
+      <Item value="ProjectID" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ProjectManager.WebUI.Models.Repository">
+      <Item value="SaveChanges`0" priority="53" />
+      <Item value="PropertiesOfProjects" priority="80" />
+      <Item value="Histories" priority="107" />
+      <Item value="ExecuteFunction`1" priority="26" />
+      <Item value="ExecuteStoreQuery`1" priority="26" />
+      <Item value="ExecuteStoreCommand`0" priority="53" />
+      <Item value="Projects" priority="82" />
+      <Item value="DefaultValues" priority="53" />
+      <Item value="Persons" priority="27" />
+      <Item value="Properties" priority="53" />
+      <Item value="Types" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.Objects.ObjectSet`1">
+      <Item value="Where`0" priority="82" />
+      <Item value="DeleteObject`0" priority="49" />
+      <Item value="Select`0" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Linq.IQueryable`1">
+      <Item value="ToArray`1" priority="26" />
+      <Item value="AsEnumerable`1" priority="26" />
+      <Item value="ToList`1" priority="26" />
+      <Item value="Select`2" priority="26" />
+      <Item value="Single`1" priority="26" />
+      <Item value="SingleOrDefault`1" priority="49" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@ProjectManager.WebUI.Models.Filter">
+      <Item value="IsFilterStringValid`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Text.RegularExpressions.Regex">
+      <Item value="IsMatch`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.List`1">
+      <Item value="Count" priority="80" />
+      <Item value="Remove`0" priority="53" />
+      <Item value="AsEnumerable`1" priority="53" />
+      <Item value="Sort`0" priority="53" />
+      <Item value="ElementAt`1" priority="26" />
+      <Item value="Where`1" priority="26" />
+      <Item value="Insert`0" priority="26" />
+      <Item value="Add`0" priority="49" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ProjectManager.WebUI.Models.DisplayedFieldViewModel">
+      <Item value="ColumnsList" priority="26" />
+      <Item value="PropertiesList" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="CssCodeCompletionContext">
+      <Item value="editor-field" priority="9" />
+      <Item value="a" priority="53" />
+      <Item value="input" priority="29" />
+      <Item value="textarea" priority="3" />
+      <Item value="font" priority="17" />
+      <Item value="color" priority="10" />
+      <Item value="black" priority="6" />
+      <Item value="margin" priority="65" />
+      <Item value="padding" priority="74" />
+      <Item value="font-size" priority="32" />
+      <Item value="font-family" priority="37" />
+      <Item value="cursive" priority="4" />
+      <Item value="font-style" priority="5" />
+      <Item value="text-align" priority="27" />
+      <Item value="header" priority="9" />
+      <Item value="monospace" priority="11" />
+      <Item value="background-color" priority="5" />
+      <Item value="darkblue" priority="11" />
+      <Item value="wheat" priority="4" />
+      <Item value="white" priority="4" />
+      <Item value="editor-label" priority="9" />
+      <Item value="filterText" priority="5" />
+      <Item value="ourHeader" priority="5" />
+      <Item value="border-left" priority="13" />
+      <Item value="title" priority="11" />
+      <Item value="ourTitle" priority="19" />
+      <Item value="div" priority="23" />
+      <Item value="ourDiv" priority="13" />
+      <Item value="padding-left" priority="42" />
+      <Item value="margin-bottom" priority="25" />
+      <Item value="padding-bottom" priority="5" />
+      <Item value="margin-top" priority="8" />
+      <Item value="margin-left" priority="35" />
+      <Item value="size" priority="27" />
+      <Item value="border-radius" priority="9" />
+      <Item value="margin-right" priority="25" />
+      <Item value="width" priority="24" />
+      <Item value="serif" priority="4" />
+      <Item value="sans-serif" priority="4" />
+      <Item value="table" priority="5" />
+      <Item value="ourTable" priority="3" />
+      <Item value="border-width" priority="7" />
+      <Item value="border-color" priority="3" />
+      <Item value="border-spacing" priority="5" />
+      <Item value="border" priority="35" />
+      <Item value="border-style" priority="9" />
+      <Item value="groove" priority="9" />
+      <Item value="double" priority="9" />
+      <Item value="wave" priority="9" />
+      <Item value="dashed" priority="4" />
+      <Item value="dotted" priority="4" />
+      <Item value="position" priority="11" />
+      <Item value="absolute" priority="20" />
+      <Item value="static" priority="4" />
+      <Item value="inherit" priority="9" />
+      <Item value="fixed" priority="4" />
+      <Item value="relative" priority="4" />
+      <Item value="left" priority="5" />
+      <Item value="right" priority="5" />
+      <Item value="resetProperties" priority="4" />
+      <Item value="article" priority="3" />
+      <Item value="select" priority="9" />
+      <Item value="h3" priority="5" />
+      <Item value="h5" priority="5" />
+      <Item value="dialog-addnew" priority="4" />
+      <Item value="img" priority="11" />
+      <Item value="center" priority="6" />
+      <Item value="alignment-adjust" priority="3" />
+      <Item value="central" priority="6" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ProjectManager.WebUI.Models.ViewModels.ProjectViewModel">
+      <Item value="CreateByName" priority="26" />
+      <Item value="Properties" priority="242" />
+      <Item value="ProjectId" priority="162" />
+      <Item value="CreateBy" priority="53" />
+      <Item value="CreateAt" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@ProjectManager.WebUI.Models.Bulk">
+      <Item value="Export`0" priority="54" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ProjectManager.WebUI.Controllers.ProjectController">
+      <Item value="Response" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ProjectManager.WebUI.Models.ViewModels.ExportViewModel">
+      <Item value="FilterString" priority="107" />
+      <Item value="TableName" priority="242" />
+      <Item value="TableNamesList" priority="80" />
+    </ItemStatistics>
+    <ItemStatistics item="HtmlEntityCodeCompletionContext">
+      <Item value="&amp;AElig;" priority="4" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:LINQtoCSV.CsvFileDescription">
+      <Item value="EnforceCsvColumnAttribute" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.IO.StreamWriter">
+      <Item value="WriteLine`0" priority="80" />
+      <Item value="Close`0" priority="53" />
+      <Item value="Write`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ProjectManager.WebUI.Models.DefaultValue">
+      <Item value="ValueID" priority="53" />
+      <Item value="PropertyID" priority="53" />
+      <Item value="Value" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ProjectManager.WebUI.Models.History">
+      <Item value="PropertyDateTimeModified" priority="26" />
+      <Item value="PropertyPersonIDModified" priority="26" />
+      <Item value="PropertyValue" priority="26" />
+      <Item value="PropertyID" priority="26" />
+      <Item value="ProjectID" priority="26" />
+      <Item value="RecordID" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ProjectManager.WebUI.Models.Person">
+      <Item value="PersonID" priority="26" />
+      <Item value="PersonName" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ProjectManager.WebUI.Models.Project">
+      <Item value="CreateAt" priority="26" />
+      <Item value="CreateBy" priority="26" />
+      <Item value="ProjectID" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ProjectManager.WebUI.Models.Type">
+      <Item value="TypeName" priority="26" />
+      <Item value="TypeID" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ProjectManager.WebUI.Models.Property">
+      <Item value="PropertyIsDefault" priority="26" />
+      <Item value="PropertyIsPublic" priority="26" />
+      <Item value="PropertyName" priority="53" />
+      <Item value="PropertyTypeID" priority="26" />
+      <Item value="PropertyID" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ProjectManager.WebUI.Models.ProjectDataManager">
+      <Item value="Export`0" priority="27" />
+      <Item value="Import`0" priority="26" />
+      <Item value="TryParse`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.HttpPostedFileBase">
+      <Item value="FileName" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.IO.StreamReader">
+      <Item value="ReadToEnd`0" priority="26" />
+      <Item value="Close`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.String">
+      <Item value="Trim`0" priority="53" />
+      <Item value="Remove`0" priority="53" />
+      <Item value="Reverse`1" priority="26" />
+      <Item value="Replace`0" priority="26" />
+      <Item value="Substring`0" priority="53" />
+      <Item value="Length" priority="107" />
+      <Item value="TrimStart`0" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.IO.File">
+      <Item value="Delete`0" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Double">
+      <Item value="TryParse`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Int32">
+      <Item value="TryParse`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Int32">
+      <Item value="ToString`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Double">
+      <Item value="ToString`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.String">
+      <Item value="Compare`0" priority="55" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.IEnumerable`1">
+      <Item value="Select`2" priority="26" />
+      <Item value="SingleOrDefault`1" priority="22" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Environment">
+      <Item value="UserName" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Guid">
+      <Item value="TryParse`0" priority="26" />
+      <Item value="Parse`0" priority="53" />
+      <Item value="NewGuid`0" priority="136" />
+      <Item value="Empty" priority="80" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.DateTime">
+      <Item value="Now" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.IO.Path">
+      <Item value="Combine`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.Mvc.UrlHelper">
+      <Item value="RouteCollection" priority="26" />
+      <Item value="RequestContext" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.Routing.RequestContext">
+      <Item value="HttpContext" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.HttpContextBase">
+      <Item value="Request" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="JavaScriptSpecificContext">
+      <Item value="$" priority="19" />
+    </ItemStatistics>
+    <ItemStatistics item="JavaScriptSpecificContextQualified">
+      <Item value="click" priority="9" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir IsNull="False">
+    </NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="livetemplates.csharp.usevar">False</setting>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+</Configuration>

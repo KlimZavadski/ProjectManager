@@ -1,0 +1,15 @@
+﻿@model ProjectManager.WebUI.Models.ViewModels.ProjectViewModel
+@{
+    ViewBag.Title = "Add";
+}
+
+<div class="ourDiv">
+    @using(Html.BeginForm("Edit", "Project", FormMethod.Post))
+    {
+        @Html.EditorForModel()
+        <p align="left" class="actionButtons">
+            <input class="actionButtons" type="submit" value="Ok" />
+            <a href="@Url.Action("BackToUrl", "Project")">Cancel</a>
+        </p>
+    }    
+</div>

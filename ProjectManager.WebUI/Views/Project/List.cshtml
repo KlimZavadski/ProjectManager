@@ -1,0 +1,77 @@
+﻿@model ProjectManager.WebUI.Models.ViewModels.ProjectListViewModel
+@{
+    ViewBag.Title = "Projects List";
+}
+
+<div class="ourDiv">
+    @using(Html.BeginForm("List", "Project", FormMethod.Get))
+    {
+        @Html.TextBox("filter", Request.Params["filter"], new { @class = "filterText" })
+    }
+
+    <table border="3" cellpadding="10" cellspacing="0" class="ourTable">
+        <tr>
+            @foreach (String head in Model.Headers)
+            {
+                <td style="font-size: 1.5em;">@head</td>
+            }            
+        </tr>
+        @foreach (ProjectManager.WebUI.Models.ViewModels.ProjectViewModel project in Model.Projects)
+        {
+            <tr>
+                @foreach (String head in Model.Headers)
+                {
+                    bool propertyIsEmpty = true;
+                    foreach (ProjectManager.WebUI.Models.ViewModels.PropertyViewModel property in project.Properties)
+                    {
+                        if (property.PropertyName == head)
+                        {
+                            if (property.PropertyValues.Count > 1)
+                            {						
+                                <td>
+                                    @foreach (ProjectManager.WebUI.Models.ViewModels.PropertyValue s in property.PropertyValues)
+                                    {
+                                        @s.Value
+                                        <br />
+                                    }
+                                </td>	  
+                            }
+                            else
+                            {
+                                if (property.PropertyName == "Title")
+                                {
+                                    <div >
+                                        <td class="resetProperties">
+                                        @Html.ActionLink(property.PropertyValues[0].Value, "Details", "Project", new { returnUrl = Request.Url.PathAndQuery, id = project.ProjectId }, new { @class = "ourText"})
+                                        </td>
+                                    </div>
+							    }
+                                else
+                                {
+                                    <td>@property.PropertyValues[0].Value</td>
+                                }
+                            }
+                            propertyIsEmpty = false;
+                            break;
+                        }
+                    }
+                    if (propertyIsEmpty)
+                    {
+                        <td style="font-size: .70em;">N/A</td>
+                    }				
+			    }			    
+            </tr>
+	    }
+    </table>    
+    
+    <p class="actionButtons" style="margin-top: 2em;">
+        <a href="@Url.Action("Add", "Project", new { returnUrl = Request.Url.PathAndQuery })">Add new project</a>
+    </p>
+    <p class="actionButtons" align="right" style="margin: 2em;">
+        <a href="@Url.Action("Import", "Project", new { returnUrl = Request.Url.PathAndQuery })">Import</a>
+        <a href="@Url.Action("Export", "Project", new { filter = Request.Params["filter"], returnUrl = Request.Url.PathAndQuery })">Export</a>
+        <p class="actionButtons" align="right">
+            <a style="padding: .3em 7.3em; margin-right: 2em;" href="@Url.Action("EditHeaders", "Project", new { returnUrl = Request.Url.PathAndQuery })">Settings</a>     
+        </p>
+    </p>
+</div>

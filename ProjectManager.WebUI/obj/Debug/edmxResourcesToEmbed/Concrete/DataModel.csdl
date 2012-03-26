@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ProjectManagerModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="DbContext" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="HistoryRecords" EntityType="ProjectManagerModel.HistoryRecord" />
+    <EntitySet Name="Projects" EntityType="ProjectManagerModel.Project" />
+    <EntitySet Name="Properties" EntityType="ProjectManagerModel.Property" />
+    <EntitySet Name="PropertyDefaultValues" EntityType="ProjectManagerModel.PropertyDefaultValue" />
+    <EntitySet Name="sysdiagrams" EntityType="ProjectManagerModel.sysdiagram" />
+    <EntitySet Name="Types" EntityType="ProjectManagerModel.Type" />
+    <AssociationSet Name="FK_History_Properties" Association="ProjectManagerModel.FK_History_Properties">
+      <End Role="Properties" EntitySet="Properties" />
+      <End Role="HistoryRecords" EntitySet="HistoryRecords" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Projects_Properties" Association="ProjectManagerModel.FK_Projects_Properties">
+      <End Role="Properties" EntitySet="Properties" />
+      <End Role="Projects" EntitySet="Projects" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Properties_Types" Association="ProjectManagerModel.FK_Properties_Types">
+      <End Role="Types" EntitySet="Types" />
+      <End Role="Properties" EntitySet="Properties" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PropertyDefaultValues_Properties" Association="ProjectManagerModel.FK_PropertyDefaultValues_Properties">
+      <End Role="Properties" EntitySet="Properties" />
+      <End Role="PropertyDefaultValues" EntitySet="PropertyDefaultValues" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="HistoryRecord">
+    <Key>
+      <PropertyRef Name="HistoryRecordsPK" />
+    </Key>
+    <Property Name="H_ProjectId" Type="Guid" Nullable="false" />
+    <Property Name="H_PropertyId" Type="Guid" Nullable="false" />
+    <Property Name="H_PropertyValue" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="H_PropertyDateModified" Type="DateTime" Nullable="false" />
+    <Property Name="H_PropertyPersonModified" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="HistoryRecordsPK" Type="Guid" Nullable="false" />
+    <NavigationProperty Name="Property" Relationship="ProjectManagerModel.FK_History_Properties" FromRole="HistoryRecords" ToRole="Properties" />
+  </EntityType>
+  <EntityType Name="Project">
+    <Key>
+      <PropertyRef Name="ProjectsPK" />
+    </Key>
+    <Property Name="ProjectId" Type="Guid" Nullable="false" />
+    <Property Name="PropertyId" Type="Guid" Nullable="false" />
+    <Property Name="PropertyValue" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="PropertyDateModified" Type="DateTime" Nullable="false" />
+    <Property Name="PropertyPersonModified" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="ProjectsPK" Type="Guid" Nullable="false" />
+    <NavigationProperty Name="Property" Relationship="ProjectManagerModel.FK_Projects_Properties" FromRole="Projects" ToRole="Properties" />
+  </EntityType>
+  <EntityType Name="Property">
+    <Key>
+      <PropertyRef Name="PropertyId" />
+    </Key>
+    <Property Name="PropertyId" Type="Guid" Nullable="false" />
+    <Property Name="PropertyName" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="PropertyIsPublic" Type="Boolean" Nullable="false" />
+    <Property Name="PropertyIsDefault" Type="Boolean" Nullable="false" />
+    <Property Name="PropertyTypeId" Type="Guid" Nullable="false" />
+    <NavigationProperty Name="HistoryRecords" Relationship="ProjectManagerModel.FK_History_Properties" FromRole="Properties" ToRole="HistoryRecords" />
+    <NavigationProperty Name="Projects" Relationship="ProjectManagerModel.FK_Projects_Properties" FromRole="Properties" ToRole="Projects" />
+    <NavigationProperty Name="Type" Relationship="ProjectManagerModel.FK_Properties_Types" FromRole="Properties" ToRole="Types" />
+    <NavigationProperty Name="PropertyDefaultValues" Relationship="ProjectManagerModel.FK_PropertyDefaultValues_Properties" FromRole="Properties" ToRole="PropertyDefaultValues" />
+  </EntityType>
+  <EntityType Name="PropertyDefaultValue">
+    <Key>
+      <PropertyRef Name="PropertyDefaultValuesPK" />
+    </Key>
+    <Property Name="PropertyId" Type="Guid" Nullable="false" />
+    <Property Name="PropertyValue" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="PropertyDefaultValuesPK" Type="Guid" Nullable="false" />
+    <NavigationProperty Name="Property" Relationship="ProjectManagerModel.FK_PropertyDefaultValues_Properties" FromRole="PropertyDefaultValues" ToRole="Properties" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Type">
+    <Key>
+      <PropertyRef Name="TypeId" />
+    </Key>
+    <Property Name="TypeId" Type="Guid" Nullable="false" />
+    <Property Name="TypeName" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="Properties" Relationship="ProjectManagerModel.FK_Properties_Types" FromRole="Types" ToRole="Properties" />
+  </EntityType>
+  <Association Name="FK_History_Properties">
+    <End Role="Properties" Type="ProjectManagerModel.Property" Multiplicity="1" />
+    <End Role="HistoryRecords" Type="ProjectManagerModel.HistoryRecord" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Properties">
+        <PropertyRef Name="PropertyId" />
+      </Principal>
+      <Dependent Role="HistoryRecords">
+        <PropertyRef Name="H_PropertyId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Projects_Properties">
+    <End Role="Properties" Type="ProjectManagerModel.Property" Multiplicity="1" />
+    <End Role="Projects" Type="ProjectManagerModel.Project" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Properties">
+        <PropertyRef Name="PropertyId" />
+      </Principal>
+      <Dependent Role="Projects">
+        <PropertyRef Name="PropertyId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Properties_Types">
+    <End Role="Types" Type="ProjectManagerModel.Type" Multiplicity="1" />
+    <End Role="Properties" Type="ProjectManagerModel.Property" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Types">
+        <PropertyRef Name="TypeId" />
+      </Principal>
+      <Dependent Role="Properties">
+        <PropertyRef Name="PropertyTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PropertyDefaultValues_Properties">
+    <End Role="Properties" Type="ProjectManagerModel.Property" Multiplicity="1" />
+    <End Role="PropertyDefaultValues" Type="ProjectManagerModel.PropertyDefaultValue" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Properties">
+        <PropertyRef Name="PropertyId" />
+      </Principal>
+      <Dependent Role="PropertyDefaultValues">
+        <PropertyRef Name="PropertyId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

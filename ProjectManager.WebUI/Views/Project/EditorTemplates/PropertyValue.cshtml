@@ -1,0 +1,7 @@
+﻿@model ProjectManager.WebUI.Models.ViewModels.PropertyValue
+
+@Html.HiddenFor(model => model.RecordId)
+@Html.HiddenFor(model => model.PropertyPersonIdModified)
+@Html.HiddenFor(model => model.PropertyDateTimeModified)
+
+@Html.EditorFor(model => model.Value)
