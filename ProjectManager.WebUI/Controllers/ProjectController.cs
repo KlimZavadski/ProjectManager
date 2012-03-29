@@ -30,7 +30,6 @@ namespace ProjectManager.WebUI.Controllers
             {
                 Session[SessionDisplayedField] = GetDefaultFields();
             }
-
             if (filter != null && filter != "")
             {
                 if (ProjectManager.WebUI.Models.Filter.IsFilterStringValid(filter))
@@ -47,35 +46,27 @@ namespace ProjectManager.WebUI.Controllers
         [HttpGet]
         public ActionResult Details(String returnUrl, Guid id)
         {
-            Session[SessionReturnUrl] = returnUrl;
-            ProjectViewModel projectViewMode = manager.GetProjectViewModel(id);
-            return View(projectViewMode);
-        }
-
-        [HttpGet]
-        public ActionResult Edit(Guid id)
-        {
-            ProjectViewModel projectViewMode = manager.GetProjectViewModel(id);
-            return View(projectViewMode);
-        }
-
-        [HttpPost]
-        public ActionResult Edit(ProjectViewModel projectViewModel)
-        {
-            if (projectViewModel.ProjectId == Guid.Empty)
+            if (returnUrl != null)
             {
-                Session[SessionReturnUrl] = "Project/Edit/";
+                Session[SessionReturnUrl] = returnUrl;
             }
-            manager.SaveProject(projectViewModel);            
-            return RedirectToAction("BackToUrl");
+            ProjectViewModel projectViewMode = manager.GetProjectViewModel(id);
+            return View(projectViewMode);
         }
-        
+      
         [HttpGet]
         public ActionResult Add(String returnUrl)
         {
             Session[SessionReturnUrl] = returnUrl;
             ProjectViewModel projectViewMode = manager.AddNewProject();
             return View(projectViewMode);
+        }
+
+        [HttpPost]
+        public ActionResult Add(ProjectViewModel projectViewModel)
+        {            
+            manager.SaveProject(projectViewModel);
+            return RedirectToAction("Details", new { returnUrl = "", id = projectViewModel.ProjectId });
         }
 
         public ActionResult Delete(Guid id)
@@ -151,6 +142,10 @@ namespace ProjectManager.WebUI.Controllers
 
         public ActionResult BackToUrl()
         {
+            if (Session[SessionReturnUrl] == null || (String)Session[SessionReturnUrl] == "")
+            {
+                RedirectToAction("List", "Project");
+            }
             return Redirect((String)Session[SessionReturnUrl]);
         }
 

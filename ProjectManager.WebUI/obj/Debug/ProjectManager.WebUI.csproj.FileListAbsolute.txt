@@ -65,3 +65,18 @@ D:\111111111111111111\hard copy\ProjectManager\ProjectManager.WebUI\obj\Debug\Pr
 D:\111111111111111111\hard copy\ProjectManager\ProjectManager.WebUI\obj\Debug\ProjectManager.WebUI.pdb
 C:\STUDENTS\ProjectManager\ProjectManager.WebUI\bin\LINQtoCSV.dll
 C:\STUDENTS\ProjectManager\ProjectManager.WebUI\bin\LINQtoCSV.pdb
+D:\unsorted\study\itransition\ProjectManager FINAL\ProjectManager ver 1.0\ProjectManager.WebUI\bin\ProjectManager.WebUI.dll
+D:\unsorted\study\itransition\ProjectManager FINAL\ProjectManager ver 1.0\ProjectManager.WebUI\bin\ProjectManager.WebUI.pdb
+D:\unsorted\study\itransition\ProjectManager FINAL\ProjectManager ver 1.0\ProjectManager.WebUI\bin\EntityFramework.dll
+D:\unsorted\study\itransition\ProjectManager FINAL\ProjectManager ver 1.0\ProjectManager.WebUI\bin\LINQtoCSV.dll
+D:\unsorted\study\itransition\ProjectManager FINAL\ProjectManager ver 1.0\ProjectManager.WebUI\bin\Moq.dll
+D:\unsorted\study\itransition\ProjectManager FINAL\ProjectManager ver 1.0\ProjectManager.WebUI\bin\Ninject.dll
+D:\unsorted\study\itransition\ProjectManager FINAL\ProjectManager ver 1.0\ProjectManager.WebUI\bin\EntityFramework.xml
+D:\unsorted\study\itransition\ProjectManager FINAL\ProjectManager ver 1.0\ProjectManager.WebUI\bin\LINQtoCSV.pdb
+D:\unsorted\study\itransition\ProjectManager FINAL\ProjectManager ver 1.0\ProjectManager.WebUI\bin\Moq.pdb
+D:\unsorted\study\itransition\ProjectManager FINAL\ProjectManager ver 1.0\ProjectManager.WebUI\bin\Moq.xml
+D:\unsorted\study\itransition\ProjectManager FINAL\ProjectManager ver 1.0\ProjectManager.WebUI\bin\Ninject.pdb
+D:\unsorted\study\itransition\ProjectManager FINAL\ProjectManager ver 1.0\ProjectManager.WebUI\bin\Ninject.xml
+D:\unsorted\study\itransition\ProjectManager FINAL\ProjectManager ver 1.0\ProjectManager.WebUI\obj\Debug\ResolveAssemblyReference.cache
+D:\unsorted\study\itransition\ProjectManager FINAL\ProjectManager ver 1.0\ProjectManager.WebUI\obj\Debug\ProjectManager.WebUI.dll
+D:\unsorted\study\itransition\ProjectManager FINAL\ProjectManager ver 1.0\ProjectManager.WebUI\obj\Debug\ProjectManager.WebUI.pdb

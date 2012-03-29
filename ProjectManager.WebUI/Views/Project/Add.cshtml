@@ -4,12 +4,12 @@
 }
 
 <div class="ourDiv">
-    @using(Html.BeginForm("Edit", "Project", FormMethod.Post))
-    {
+    @using (Html.BeginForm())
+	{
         @Html.EditorForModel()
         <p align="left" class="actionButtons">
             <input class="actionButtons" type="submit" value="Ok" />
             <a href="@Url.Action("BackToUrl", "Project")">Cancel</a>
         </p>
-    }    
+	}    
 </div>

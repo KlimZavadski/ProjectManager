@@ -16,6 +16,7 @@
 
     $("#radios :radio").live('click', function () {
         radiofocus = this;
+        console.log("radios click " + $(this).val());
         switch ($(this).val()) {
             case "Number":
                 {
@@ -30,7 +31,7 @@
                     }
                     break;
                 }
-            case "Boolean":
+            case "Bool":
                 {
                     needtoaddnum = true;
                     needtoadddatetime = true;
@@ -43,16 +44,17 @@
                     }
                     break;
                 }
-            case "Date":
+            case "DateTime":
                 {
+                    console.log("in DateTime");
                     needtoaddnum = true;
                     needtoaddbool = true;
                     needtoaddstring = true;
                     if (needtoadddatetime) {
                         $("#values").children().remove();
-                        $("#morelessbuttons").hide();
                         $("#more").click();
-                        $("#values :checkbox").remove();
+                        $("#morelessbuttons").show();
+                        //$("#values :checkbox").remove();
                         needtoadddatetime = false;
                     }
                     break;
@@ -85,53 +87,44 @@
             }
         },
         close: function () {
+            if ($(radiofocus).val() == "Bool") {
+                var resp = $("#boolcheckbox").is(":checked").toString();
+            }
+            else {
+                var resp = "";
+                var checkboxes = $('#values :checkbox');
+                var textboxes = $('#values :text');
+                for (i = 0; i < textboxes.length; i++) {
+                    resp += '{';
+                    var value = textboxes[i].value;
+                    resp += value;
+                    resp += '%';
+                    var check = checkboxes[i].checked;
+                    resp += check;
+                    resp += '}';
+                }
+            }
             switch ($(radiofocus).val()) {
                 case "Number":
                     {
-                        var resp = "";
-                        var checkboxes = $('#values :checkbox');
-                        var textboxes = $('#values :text');
-                        for (i = 0; i < textboxes.length; i++) {
-                            resp += '{';
-                            var value = textboxes[i].value;
-                            resp += value;
-                            resp += '%';
-                            var check = checkboxes[i].checked;
-                            resp += check;
-                            resp += '}';
-                        }
                         refreshHomes($("#property_name").val(), $("#ispublic").is(":checked"), resp, $("#ProjectId").val(), "Number");
                         break;
                     }
-                case "Boolean":
+                case "Bool":
                     {
-                        refreshHomes($("#property_name").val(), $("#ispublic").is(":checked"), $("#boolcheckbox").is(":checked").toString(), $("#ProjectId").val(), "Boolean");
+                        refreshHomes($("#property_name").val(), $("#ispublic").is(":checked"), resp, $("#ProjectId").val(), "Bool");
                         break;
                     }
-                case "Date":
+                case "DateTime":
                     {
-                        refreshHomes($("#property_name").val(), $("#ispublic").is(":checked"), $("#values :text").val().toString(), $("#ProjectId").val(), "Date");
+                        console.log("processing DateTime");
+                        console.log(resp);
+                        refreshHomes($("#property_name").val(), $("#ispublic").is(":checked"), resp, $("#ProjectId").val(), "DateTime");
                         break;
                     }
                 case "String":
                     {
-                        var resp = "";
-                        var checkboxes = $('#values :checkbox');
-                        var textboxes = $('#values :text');
-                        for (i = 0; i < textboxes.length; i++) {
-                            resp += '{';
-                            var value = textboxes[i].value;
-                            resp += value;
-                            resp += '%';
-                            var check = checkboxes[i].checked;
-                            resp += check;
-                            resp += '}';
-                        }
                         refreshHomes($("#property_name").val(), $("#ispublic").is(":checked"), resp, $("#ProjectId").val(), "String");
-                        break;
-                    }
-                default:
-                    {
                         break;
                     }
             }
@@ -151,7 +144,7 @@
     $("#more").button().click(function () {
         num++;
         $('<div id="text' + num + '"><input type="checkbox" checked="checked" name="check' + num + '" id="check' + num + '"><input type="text" value="new value" name="text' + num + '" id=text"' + num + '"/></div>').appendTo($("#values"));
-        if ($(radiofocus).val().toString() == "Number") {
+        if ($(radiofocus).val().toString() == "Number" || $(radiofocus).val().toString() == "DateTime") {
             $("#values :checkbox").hide();
         }
     });

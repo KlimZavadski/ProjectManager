@@ -18,7 +18,6 @@
             $("#values-edit").children().remove();
         }
     });
-    /*$("#test1").live('click', function () {*/
 
     $("#editpropertybutton").live('click', function () {
         $("#values-edit").children().remove();

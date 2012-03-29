@@ -1,0 +1,6 @@
+﻿@model IEnumerable<ProjectManager.WebUI.Models.PropertiesOfProject>
+@foreach (var item in Model)
+{
+    @Html.TextBoxFor(_ => item.PropertyValue, new { @readonly = "true" })   
+}
+

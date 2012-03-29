@@ -139,6 +139,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\AddNewProperty.js" />
     <Content Include="Scripts\EditProperty.js" />
+    <Content Include="Scripts\EditPropertyNew.js" />
     <Content Include="Scripts\FunctionalityDetails.js" />
     <Content Include="Scripts\jquery-1.5.1-vsdoc.js" />
     <Content Include="Scripts\jquery-1.5.1.js" />
@@ -229,15 +230,25 @@
     <Content Include="Views\EditProperty\EditBool.cshtml" />
     <Content Include="Views\EditProperty\EditDate.cshtml" />
     <Content Include="Views\EditProperty\EditNumber.cshtml" />
-    <Content Include="Views\EditProperty\EditNumberArray.cshtml" />
     <Content Include="Views\EditProperty\EditString.cshtml" />
-    <Content Include="Views\EditProperty\EditStringArray.cshtml" />
     <Content Include="Views\EditProperty\GetPropertyHistory.cshtml" />
     <Content Include="Views\EditProperty\GetPropertyType.cshtml" />
     <Content Include="Views\EditProperty\Test1.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Views\EditProperty\EditorTemplates\" />
+    <Content Include="Views\EditProperty\testgetproperty.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\EditProperty\Editfields.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\EditProperty\EditorTemplates\PropertiesOfProject.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\EditProperty\DisplayBool.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\EditProperty\DisplayFields.cshtml" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
@@ -259,7 +270,7 @@
           <DevelopmentServerPort>15000</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://localhost:15000/</IISUrl>
-          <NTLMAuthentication>True</NTLMAuthentication>
+          <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
           </CustomServerUrl>

@@ -50,4 +50,10 @@ namespace ProjectManager.WebUI.Models
             Value = msg;
         }
     }
+
+    public class MyBool
+    {
+        public String test { get; set; }
+        public bool a;
+    }
 }

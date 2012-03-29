@@ -65,3 +65,18 @@ D:\111111111111111111\hard copy\ProjectManager\ProjectManager.UnitTests\obj\Debu
 D:\111111111111111111\hard copy\ProjectManager\ProjectManager.UnitTests\obj\Debug\ProjectManager.UnitTests.pdb
 C:\STUDENTS\ProjectManager\ProjectManager.UnitTests\bin\Debug\LINQtoCSV.dll
 C:\STUDENTS\ProjectManager\ProjectManager.UnitTests\bin\Debug\LINQtoCSV.pdb
+D:\unsorted\study\itransition\ProjectManager FINAL\ProjectManager ver 1.0\ProjectManager.UnitTests\bin\Debug\ProjectManager.UnitTests.dll
+D:\unsorted\study\itransition\ProjectManager FINAL\ProjectManager ver 1.0\ProjectManager.UnitTests\bin\Debug\ProjectManager.UnitTests.pdb
+D:\unsorted\study\itransition\ProjectManager FINAL\ProjectManager ver 1.0\ProjectManager.UnitTests\bin\Debug\Moq.dll
+D:\unsorted\study\itransition\ProjectManager FINAL\ProjectManager ver 1.0\ProjectManager.UnitTests\bin\Debug\Ninject.dll
+D:\unsorted\study\itransition\ProjectManager FINAL\ProjectManager ver 1.0\ProjectManager.UnitTests\bin\Debug\ProjectManager.WebUI.dll
+D:\unsorted\study\itransition\ProjectManager FINAL\ProjectManager ver 1.0\ProjectManager.UnitTests\bin\Debug\LINQtoCSV.dll
+D:\unsorted\study\itransition\ProjectManager FINAL\ProjectManager ver 1.0\ProjectManager.UnitTests\bin\Debug\ProjectManager.WebUI.pdb
+D:\unsorted\study\itransition\ProjectManager FINAL\ProjectManager ver 1.0\ProjectManager.UnitTests\bin\Debug\Moq.pdb
+D:\unsorted\study\itransition\ProjectManager FINAL\ProjectManager ver 1.0\ProjectManager.UnitTests\bin\Debug\Moq.xml
+D:\unsorted\study\itransition\ProjectManager FINAL\ProjectManager ver 1.0\ProjectManager.UnitTests\bin\Debug\Ninject.pdb
+D:\unsorted\study\itransition\ProjectManager FINAL\ProjectManager ver 1.0\ProjectManager.UnitTests\bin\Debug\Ninject.xml
+D:\unsorted\study\itransition\ProjectManager FINAL\ProjectManager ver 1.0\ProjectManager.UnitTests\bin\Debug\LINQtoCSV.pdb
+D:\unsorted\study\itransition\ProjectManager FINAL\ProjectManager ver 1.0\ProjectManager.UnitTests\obj\Debug\ResolveAssemblyReference.cache
+D:\unsorted\study\itransition\ProjectManager FINAL\ProjectManager ver 1.0\ProjectManager.UnitTests\obj\Debug\ProjectManager.UnitTests.dll
+D:\unsorted\study\itransition\ProjectManager FINAL\ProjectManager ver 1.0\ProjectManager.UnitTests\obj\Debug\ProjectManager.UnitTests.pdb

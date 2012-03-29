@@ -2,16 +2,13 @@
 @{
     ViewBag.Title = "Details";
 }
-
 @Html.HiddenFor(model => model.ProjectId)
-
-<div class="ourDiv">    
+<div class="ourDiv">
     @using (Html.BeginForm())
     {
         @Html.HiddenFor(model => model.ProjectId)
         @Html.DisplayForModel()
     }
-
     @using (Html.BeginForm())
     {
         <p style="margin-left: 2em;" align="left" class="actionButtons">
@@ -19,14 +16,12 @@
         </p>
         <p class="actionButtons" align="right" style="margin-right: 2em;">
             <a href="@Url.Action("Delete", "Project", new { id = Model.ProjectId })">Delete</a>
-            <a style="" href="@Url.Action("BackToUrl", "Project")">Back to projects</a>                    
+            <a style="" href="@Url.Action("BackToUrl", "Project")">Back to projects</a>
         </p>
     }
 </div>
-
 @*<p align="center" class="actionButtons">
-    <a id="property-addnew1">Add new property</a>*@
-</p>
+    <a id="property-addnew1">Add new property</a>*@ </p>
 <div id="loading-content" style="display: none;">
     Loading data
 </div>
@@ -50,12 +45,12 @@
                         Number</label>
                 </p>
                 <p>
-                    <input type="radio" name="radio1" value="Boolean" />
+                    <input type="radio" name="radio1" value="Bool" />
                     <label>
-                        Boolean</label>
+                        Bool</label>
                 </p>
                 <p>
-                    <input type="radio" name="radio1" value="Date" />
+                    <input type="radio" name="radio1" value="DateTime" />
                     <label>
                         Date</label>
                 </p>
@@ -87,6 +82,10 @@
     </div>
     <div id="testhere">
     </div>
+    <div id="morelessbuttons1">
+        <input type="button" id="more1" value="More" />
+        <input type="button" id="less1" value="Less" />
+    </div>
 </div>
 <div id="dialog-history">
     <h3 id="form-header2">
@@ -96,5 +95,5 @@
 </div>
 <script src="../../Scripts/FunctionalityDetails.js" type="text/javascript"></script>
 <script src="../../Scripts/AddNewProperty.js" type="text/javascript"></script>
-<script src="../../Scripts/EditProperty.js" type="text/javascript"></script>
+<script src="../../Scripts/EditPropertyNew.js" type="text/javascript"></script>
 <script src="../../Scripts/PropertyHistory.js" type="text/javascript"></script>

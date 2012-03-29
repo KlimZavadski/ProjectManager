@@ -8,40 +8,47 @@ namespace ProjectManager.WebUI.Models
 {
     public class Filter
     {
-        public FilterObject[] FilterArray { get; set; }
+        public List<FilterObject> FilterList { get; set; }
 
         public Filter()
         {
-            FilterArray = new FilterObject[0];
+            FilterList = new List<FilterObject>();
         }
 
         public Filter(String filter)
         {
+            int i;
             Regex regEx = new Regex(@"(%[^%]*%\s*\S+\s*[^\|&]+[\|&$]{0,2})");
             MatchCollection collection = regEx.Matches(filter);
-            this.FilterArray = new FilterObject[collection.Count];
-            for (int i = 0; i < collection.Count; i++)
+            this.FilterList = new List<FilterObject>();
+            foreach (Match col in collection)
             {
-                this.FilterArray[i] = new FilterObject(collection[i].Value);
+                FilterObject filterObject = new FilterObject(col.Value);
+                if (filterObject.Name != null)
+                {
+                    this.FilterList.Add(filterObject);
+                }
             }
+            this.FilterList.Last().Operator = "";
         }
 
         public String[] GetNamesArray()
         {
-            String[] namesArray = new string[FilterArray.Count()];
-            for (int i = 0; i < FilterArray.Count(); i++)
+            String[] namesArray = new string[FilterList.Count()];
+            for (int i = 0; i < FilterList.Count(); i++)
             {
-                namesArray[i] += FilterArray[i].Name;
+                namesArray[i] += FilterList[i].Name;
             }
             return namesArray;
         }
 
         public static bool IsFilterStringValid(String filterString)
         {
-            return Regex.IsMatch(filterString,
-                @"((([\|&]{2})|$)?\s*(%[0-9a-zA-Z_]+%)\s*" +
-                @"((\<=)|(\>=)|(!=)|(==)|(\<)|(\>))\s*" +
-                @"(([0-9]+)|('[a-zA-Z0-9_\.\s]+')|([0-9]{1,2}\/[0-9]{1,2}\/[0-9]{1,4}))\s*)*");
+            //return Regex.IsMatch(filterString,
+            //    @"((([\|&]{2})|$)?\s*(%[0-9a-zA-Z_]+%)\s*" +
+            //    @"((\<=)|(\>=)|(!=)|(==)|(\<)|(\>))\s*" +
+            //    @"(([0-9]+)|('[a-zA-Z0-9_\.\s]+')|([0-9]{1,2}\/[0-9]{1,2}\/[0-9]{1,4}))\s*)*");
+            return Regex.IsMatch(filterString, @"(([\|&$]{0,2})?%[^%]*%\s*\S+\s*[^\|&]+)");
         }
     }
 
@@ -71,7 +78,7 @@ namespace ProjectManager.WebUI.Models
             }
             length += this.Sign.Length;
             this.Value = GetValue(input, patterns[2], length);
-            if (Value[0] == '\'')
+            if (Value.Length > 0 && Value[0] == '\'')
             {
                 this.Value = Value.Substring(1, this.Value.Length - 2);
                 length += this.Value.Length + 2;
@@ -81,6 +88,10 @@ namespace ProjectManager.WebUI.Models
                 case "&&": this.Operator = "INTERSECT"; break;
                 case "||": this.Operator = "UNION"; break;
                 case "" : this.Operator = ""; break;
+            }
+            if ((this.Name.Length == 0) || (Sign.Length == 0) || (Value.Length == 0))
+            {
+                this.Name = this.Sign = this.Value = this.Operator = null;
             }
         }
 

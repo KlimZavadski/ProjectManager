@@ -59,11 +59,11 @@ namespace ProjectManager.WebUI.Models
 
         private String GetQueryString(Filter filter, int i)
         {
-            if (i / 2 < filter.FilterArray.Count<FilterObject>())
+            if (i / 2 < filter.FilterList.Count)
             {
                 return " (" + Start + " (p.PropertyName = {" + i.ToString() + "} AND pop.PropertyValue " +
-                    filter.FilterArray[i / 2].Sign + " {" + (i + 1).ToString() +
-                    "} AND p.PropertyID = pop.PropertyID)) " + filter.FilterArray[i / 2].Operator +
+                    filter.FilterList[i / 2].Sign + " {" + (i + 1).ToString() +
+                    "} AND p.PropertyID = pop.PropertyID)) " + filter.FilterList[i / 2].Operator +
                     GetQueryString(filter, i + 2);
             }
             else
@@ -74,8 +74,8 @@ namespace ProjectManager.WebUI.Models
 
         private object[] GetObjectParametrs(Filter filter)
         {
-            List<object> objectArray = new List<object>(filter.FilterArray.Count<FilterObject>() * 2);
-            foreach (FilterObject obj in filter.FilterArray)
+            List<object> objectArray = new List<object>(filter.FilterList.Count * 2);
+            foreach (FilterObject obj in filter.FilterList)
             {
                 objectArray.Add(obj.Name);
                 objectArray.Add(AddValue(obj.Value));
@@ -110,7 +110,7 @@ namespace ProjectManager.WebUI.Models
                 Project project = repository.Projects.Where(x => x.ProjectID == id).SingleOrDefault();
                 projectViewModel.ProjectId = project.ProjectID;
                 projectViewModel.CreateBy = project.CreateBy;
-                projectViewModel.CreateByName = Environment.UserName;                // TODO: Authorize
+                projectViewModel.CreateByName = GetUserName(project.CreateBy);
                 projectViewModel.CreateAt = project.CreateAt;
                 foreach (var properties in result)
                 {
@@ -293,10 +293,9 @@ namespace ProjectManager.WebUI.Models
         {
             ProjectViewModel projectViewModel = new ProjectViewModel();
             projectViewModel.ProjectId = Guid.NewGuid();
-            projectViewModel.CreateBy = 
-                Guid.Parse("cd86baf4-4b69-4160-8653-dbe256913ae5");       // TODO: authorise
+            projectViewModel.CreateBy = GetCurrentUserId();
             projectViewModel.CreateAt = DateTime.Now;
-            projectViewModel.CreateByName = Environment.UserName;
+            projectViewModel.CreateByName = GetCurrentUserName();
             projectViewModel.Properties.Add(SetTitleProperty());
             return projectViewModel;
         }
@@ -312,8 +311,7 @@ namespace ProjectManager.WebUI.Models
             propertyViewModel.PropertyValues.Add(new PropertyValue
                                                      {
                                                          PropertyDateTimeModified = DateTime.Now,
-                                                         PropertyPersonIdModified =
-                                                             Guid.Parse("cd86baf4-4b69-4160-8653-dbe256913ae5")
+                                                         PropertyPersonIdModified = GetCurrentUserId(),
                                                      });
             return propertyViewModel;
         }
@@ -470,6 +468,52 @@ namespace ProjectManager.WebUI.Models
         }
 
 
+        private Guid GetCurrentUserId()
+        {
+            String currentUserName = GetCurrentUserName();
+            Guid personId = GetUserId(currentUserName);
+            if (personId == Guid.Empty)
+            {
+                return AddUser(currentUserName);
+            }
+            return personId;
+        }
+
+        private String GetCurrentUserName()
+        {
+            return Environment.UserDomainName + "/" + Environment.UserName;
+        }
+
+        private Guid GetUserId(String userName)
+        {
+            return repository.Persons
+                .Where(x => x.PersonName == userName)
+                .Select(x => x.PersonID)
+                .SingleOrDefault();
+        }
+
+        private String GetUserName(Guid id)
+        {
+            return repository.Persons
+                .Where(x => x.PersonID == id)
+                .Select(x => x.PersonName)
+                .SingleOrDefault();
+        }
+
+        private Guid AddUser(String userName)
+        {
+            Person person = new Person();
+            person.PersonID = Guid.NewGuid();
+            person.PersonName = userName;
+            repository.Persons.AddObject(person);
+            repository.SaveChanges();
+            return person.PersonID;
+        }
+
+
+        
+
+
         public Guid AddNewPropertyToDb(NewPropertyTransfer propertyToAdd)
         {
             var result = repository.Properties
@@ -479,22 +523,7 @@ namespace ProjectManager.WebUI.Models
             {
                 List<ValueTransfer> listValues = null;
                 Guid propertyType = Guid.Empty;
-                switch (propertyToAdd.PropertyType)
-                {
-                    case "Boolean":
-                    case "DateTime":
-                        {
-                            propertyType = GetNewPropertyTypeID(0, propertyToAdd.PropertyType);
-                            break;
-                        }
-                    case "Number":
-                    case "String":
-                        {
-                            listValues = ParseInputValues(propertyToAdd.PropertyValues);
-                            propertyType = GetNewPropertyTypeID(listValues.Count, propertyToAdd.PropertyType);
-                            break;
-                        }
-                }
+                propertyType = GetNewPropertyTypeID(propertyToAdd.PropertyType);/////new
                 Guid propertyGuid = Guid.NewGuid();
                 repository.Properties.AddObject(new Property
                 {
@@ -507,8 +536,7 @@ namespace ProjectManager.WebUI.Models
 
                 switch (propertyToAdd.PropertyType)
                 {
-                    case "Boolean":
-                    case "DateTime":
+                    case "Bool":
                         {
                             repository.PropertiesOfProjects.AddObject(new PropertiesOfProject
                             {
@@ -521,8 +549,10 @@ namespace ProjectManager.WebUI.Models
                             });
                             break;
                         }
+                    case "DateTime":
                     case "Number":
                         {
+                            listValues = ParseInputValues(propertyToAdd.PropertyValues);
                             foreach (var value in listValues)
                             {
                                 repository.PropertiesOfProjects.AddObject(new PropertiesOfProject
@@ -539,6 +569,7 @@ namespace ProjectManager.WebUI.Models
                         }
                     case "String":
                         {
+                            listValues = ParseInputValues(propertyToAdd.PropertyValues);
                             foreach (var value in listValues)
                             {
                                 repository.DefaultValues.AddObject(new DefaultValue
@@ -569,63 +600,9 @@ namespace ProjectManager.WebUI.Models
             return Guid.Empty;
         }
 
-        private Guid GetNewPropertyTypeID(int countValues, String newPropertyType)
+        private Guid GetNewPropertyTypeID(String newPropertyType)
         {
-            switch (newPropertyType)
-            {
-                case "Boolean":
-                    {
-                        return repository.Types
-                            .Where(q => q.TypeName == "Bool")
-                            .Select(q => q.TypeID)
-                            .Single();
-                    }
-                case "DateTime":
-                    {
-                        return repository.Types
-                            .Where(q => q.TypeName == "DateTime")
-                            .Select(q => q.TypeID)
-                            .Single();
-                    }
-                case "Number":
-                    {
-                        if (countValues == 1)
-                        {
-                            return repository.Types
-                                .Where(q => q.TypeName == "Number")
-                                .Select(q => q.TypeID
-                                ).Single();
-                        }
-                        else
-                        {
-                            return repository.Types
-                                .Where(q => q.TypeName == "ArrayNumber")
-                                .Select(q => q.TypeID)
-                                .Single();
-                        }
-                    }
-                case "String":
-                    {
-                        if (countValues == 1)
-                        {
-                            return repository.Types
-                                .Where(q => q.TypeName == "String")
-                                .Select(q => q.TypeID)
-                                .Single();
-                        }
-                        else
-                        {
-                            return repository.Types
-                                .Where(q => q.TypeName == "ArrayString")
-                                .Select(q => q.TypeID)
-                                .Single();
-                        }
-                    }
-                default:
-                    {
-                        return Guid.Empty;
-                    }
-            }
+            return repository.Types.Where(q => q.TypeName == newPropertyType).Select(q => q.TypeID).Single();            
         }
 
         private Guid GetNewPropertyTypeID(int countValues, bool isNumber)
@@ -647,7 +624,7 @@ namespace ProjectManager.WebUI.Models
             }
         }
 
-        private List<ValueTransfer> ParseInputValues(String inputString)
+        public List<ValueTransfer> ParseInputValues(String inputString)
         {
             List<ValueTransfer> listValues = new List<ValueTransfer>();
             ValueTransfer item = null;

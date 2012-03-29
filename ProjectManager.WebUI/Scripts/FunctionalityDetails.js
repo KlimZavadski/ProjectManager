@@ -31,11 +31,3 @@ $(function () {
         $(this).siblings().slideToggle("slow");
     });
 });
-
-
-/*
-$(function () {
-    $("legend").each(function (index) {
-        $(this).siblings().slideUp();
-    });
-});*/
